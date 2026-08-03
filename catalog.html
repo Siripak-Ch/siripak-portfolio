@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Portfolio Catalog Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="catalog.css">
+  <script defer src="data/portfolio-data.js"></script>
+  <script defer src="catalog.js"></script>
+</head>
+<body>
+  <header class="catalog-header">
+    <div>
+      <p>PORTFOLIO CONTENT CONTROL</p>
+      <h1>Catalog Manager</h1>
+      <span>ลากเพื่อเรียงลำดับ · เปิด/ปิดการแสดงผล · แก้ข้อมูล TH/EN · ตรวจลิงก์ Drive</span>
+    </div>
+    <div class="header-actions">
+      <a href="index.html" target="_blank">Preview website ↗</a>
+      <button class="primary" id="exportData">Download portfolio-data.js</button>
+    </div>
+  </header>
+
+  <main class="catalog-layout">
+    <aside class="catalog-sidebar">
+      <button class="tab active" data-tab="profile">Profile & Experience</button>
+      <button class="tab" data-tab="projects">Projects</button>
+      <button class="tab" data-tab="certificates">Certificates</button>
+      <button class="tab" data-tab="activities">Activities</button>
+      <button class="tab" data-tab="sources">Drive / Source Map</button>
+      <button class="tab" data-tab="settings">Settings</button>
+      <div class="sidebar-note">
+        <strong>วิธีบันทึกขึ้นเว็บ</strong>
+        <span>กด Download แล้วนำไฟล์ใหม่ไปแทนที่ <code>data/portfolio-data.js</code> ใน GitHub จากนั้น Commit</span>
+      </div>
+    </aside>
+
+    <section class="catalog-main">
+      <div class="catalog-toolbar">
+        <div>
+          <h2 id="panelTitle">Profile & Experience</h2>
+          <p id="panelHint">แก้ข้อความหลัก About และประสบการณ์</p>
+        </div>
+        <div class="toolbar-actions">
+          <button id="addItem">+ Add item</button>
+          <button id="saveDraft">Save draft</button>
+          <button id="resetDraft">Reset</button>
+        </div>
+      </div>
+      <div id="catalogContent"></div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>

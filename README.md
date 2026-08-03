@@ -1,92 +1,203 @@
-# Siripak Chattanupakorn — Professional Portfolio
+# Siripak Chattanupakorn — Portfolio V2
 
-A responsive, static professional portfolio website designed in a navy and blue theme. It is ready for automatic deployment with GitHub Pages.
+เว็บไซต์ Portfolio แบบ Static สำหรับ GitHub Pages ธีม Navy Blue แบบ Professional รองรับภาษาไทย/อังกฤษ และใช้ระบบ Catalog เพื่อจัดการผลงานโดยไม่ต้องแก้โครงหน้าเว็บ
 
-## Project structure
+## โครงสร้างไฟล์
 
 ```text
-siripak-portfolio/
-├── .github/
-│   └── workflows/
-│       └── deploy.yml
+siripak-portfolio-v2/
+├── .github/workflows/deploy.yml
 ├── assets/
-│   ├── cert-uncertainty.jpg
-│   ├── favicon.svg
 │   ├── profile.png
-│   ├── staff-engagement.png
-│   └── workshop-passport.png
-├── .nojekyll
-├── 404.html
+│   ├── SIRIPAK-CHATTANUPAKORN-Resume.pdf
+│   └── ...
+├── data/
+│   └── portfolio-data.js       # ข้อมูลทั้งหมดที่แสดงบนเว็บ
+├── catalog.html                # หน้าจัดการ Catalog
+├── catalog.css
+├── catalog.js
+├── drive-source-map.csv        # ตารางเชื่อมโยง Drive/GitHub
+├── SOURCE_MAP.md
 ├── index.html
-├── script.js
 ├── styles.css
+├── script.js
+├── 404.html
 └── README.md
 ```
 
-## Deploy with GitHub Pages
+## 1) วิธีเลือกว่าจะโชว์อะไรและเรียงอะไรก่อน
 
-### Method A — upload through the GitHub website
+เปิดไฟล์:
 
-1. Sign in to GitHub and create a new **Public** repository, for example `siripak-portfolio`.
-2. Open the repository and choose **Add file → Upload files**.
-3. Upload every file and folder in this project. Make sure the hidden `.github` folder is included.
-4. Commit the files to the `main` branch.
-5. Open **Settings → Pages**.
-6. Under **Build and deployment → Source**, select **GitHub Actions**.
-7. Open the **Actions** tab and wait for `Deploy portfolio to GitHub Pages` to finish.
-8. The site URL will be shown in the successful workflow and in **Settings → Pages**.
+```text
+catalog.html
+```
 
-Typical URL:
+ในหน้า Catalog Manager สามารถ:
+
+- แก้ Hero, About และ Experience ในแท็บ `Profile & Experience`
+- ลากการ์ดขึ้น/ลงเพื่อเปลี่ยนลำดับ
+- เปิดหรือปิด `Visible`
+- เลือก `Highlight`
+- แก้ชื่อและรายละเอียดทั้ง TH/EN
+- แก้ Source URL และ Google Drive ID
+- เพิ่มหรือลบ Project, Certificate และ Activity
+- เปิดแท็บ `Drive / Source Map` เพื่อตรวจว่าแต่ละรายการเชื่อมกับไฟล์หรือโฟลเดอร์ใด
+
+เมื่อแก้เสร็จ กด:
+
+```text
+Download portfolio-data.js
+```
+
+นำไฟล์ที่ดาวน์โหลดไปแทนที่:
+
+```text
+data/portfolio-data.js
+```
+
+จากนั้น Commit ขึ้น GitHub เว็บจะ Deploy ใหม่อัตโนมัติ
+
+> GitHub Pages เป็นเว็บไซต์ Static จึงไม่สามารถกด Save แล้วเขียนเข้า Repository โดยตรงได้โดยไม่เพิ่มระบบ Login/Backend หน้า Catalog นี้จึงใช้วิธี Export ไฟล์ ซึ่งปลอดภัยและดูแลง่ายกว่า
+
+## 2) วิธีแก้ข้อมูลแบบเร็ว
+
+### วิธีที่ง่ายที่สุด
+
+ใช้ `catalog.html` ตามขั้นตอนด้านบน
+
+### วิธีแก้โดยตรง
+
+เปิดไฟล์:
+
+```text
+data/portfolio-data.js
+```
+
+แต่ละรายการมีตัวควบคุมหลัก:
+
+```javascript
+{
+  visible: true,      // false = ไม่แสดงบนเว็บไซต์
+  featured: true,     // true = แสดงเป็นผลงานเด่น
+  order: 1,           // ตัวเลขน้อยแสดงก่อน
+  title: {
+    en: "English title",
+    th: "ชื่อภาษาไทย"
+  },
+  source: {
+    type: "drive",
+    label: "Google Drive · Folder name",
+    id: "GOOGLE_DRIVE_FILE_OR_FOLDER_ID",
+    url: "https://drive.google.com/..."
+  }
+}
+```
+
+## 3) วิธีดูว่าแต่ละการ์ดเชื่อมกับ Drive อะไร
+
+มี 3 วิธี:
+
+1. เปิด `catalog.html` แล้วเลือก `Drive / Source Map`
+2. เปิด `SOURCE_MAP.md`
+3. เปิด `drive-source-map.csv` ด้วย Excel หรือ Google Sheets
+
+ในหน้าเว็บสาธารณะ แต่ละ Project / Certificate / Activity จะแสดงชื่อ Source ด้านล่างการ์ด และกดเปิดเอกสารต้นทางได้
+
+## 4) ข้อมูล Resume ล่าสุด
+
+เว็บไซต์ใช้ Resume ล่าสุดจากไฟล์:
+
+```text
+assets/SIRIPAK-CHATTANUPAKORN-Resume.pdf
+```
+
+เนื้อหาหลักที่อัปเดตแล้ว:
+
+- Current role: Executive, Service Transformation — Jan 2026 to Present
+- Coordinating 8+ concurrent healthcare projects
+- CES Hub and LINE OA workflow improvement
+- 40% YoY revenue-growth contribution
+- Mini MBA in Biomedical Engineering
+- Bachelor of Biomedical Engineering, Mahidol University
+- TOEIC 915
+
+เมื่อต้องการเปลี่ยน Resume ให้แทนที่ไฟล์เดิมโดยใช้ชื่อเดิม เพื่อไม่ต้องแก้ลิงก์ในเว็บไซต์
+
+## 5) ภาษาไทยและอังกฤษ
+
+ปุ่ม `EN / TH` อยู่ด้านขวาบนของเว็บไซต์ ระบบจำภาษาล่าสุดด้วย Browser Local Storage
+
+ข้อความทั้งหมดอยู่ใน `data/portfolio-data.js` เป็นคู่:
+
+```javascript
+title: {
+  en: "Project Portfolio Coordination",
+  th: "การประสานพอร์ตโครงการ"
+}
+```
+
+## 6) โครงสร้างหน้าเว็บไซต์
+
+1. About — Key success, ability, focus areas และ education
+2. Experience
+3. Projects
+   - People Development
+   - Service Development
+   - Operation Support
+4. Certificates & External Activities
+5. Contact
+
+Project แต่ละหมวดเป็น Horizontal Slider มีปุ่มเลื่อนซ้าย/ขวา และรองรับการ Swipe บนมือถือ
+
+## 7) Deploy ขึ้น GitHub Pages
+
+### อัปโหลดผ่านเว็บไซต์ GitHub
+
+1. สร้าง Public Repository เช่น `siripak-portfolio`
+2. อัปโหลดไฟล์และโฟลเดอร์ทั้งหมด รวม `.github`
+3. Commit เข้า Branch `main`
+4. ไปที่ `Settings → Pages`
+5. เลือก `Source: GitHub Actions`
+6. เปิดแท็บ `Actions` และรอ Workflow เป็นสีเขียว
+
+URL จะมีรูปแบบ:
 
 ```text
 https://YOUR-USERNAME.github.io/siripak-portfolio/
 ```
 
-### Method B — command line
-
-```bash
-git init
-git add .
-git commit -m "Create professional portfolio"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/siripak-portfolio.git
-git push -u origin main
-```
-
-Then set **Settings → Pages → Source → GitHub Actions**.
-
-## Update the website
-
-- Edit personal content and project descriptions in `index.html`.
-- Edit colors, spacing and responsive layouts in `styles.css`.
-- Edit activities and interactions in `script.js`.
-- Replace images inside `assets/` while keeping the same filenames, or update their paths in `index.html`.
-
-Every push to `main` automatically redeploys the website.
+### อัปเดตผ่าน Command Line
 
 ```bash
 git add .
-git commit -m "Update portfolio content"
+git commit -m "Update portfolio catalog"
 git push
 ```
 
-## Optional custom domain
+GitHub Actions จะ Deploy ใหม่โดยอัตโนมัติ
 
-1. Open **Settings → Pages → Custom domain**.
-2. Enter the domain or subdomain you own.
-3. Configure DNS with your domain provider using the records GitHub shows.
-4. Enable **Enforce HTTPS** after DNS verification completes.
+## 8) Preview ในเครื่อง
 
-## Important privacy check
-
-The website excludes national ID, house registration, transcript details and phone number. Before publishing, review all Google Drive links and set only the portfolio files you want visitors to see to **Anyone with the link → Viewer**.
-
-## Local preview
-
-You can double-click `index.html`, or run a local server:
+แนะนำให้รัน Local Server:
 
 ```bash
 python -m http.server 8000
 ```
 
-Then open `http://localhost:8000`.
+เปิด:
+
+```text
+http://localhost:8000/
+http://localhost:8000/catalog.html
+```
+
+## 9) Privacy และ Google Drive
+
+ก่อนเผยแพร่ ให้ตั้ง Share เฉพาะไฟล์หรือโฟลเดอร์ที่ต้องการเปิดเผยเป็น:
+
+```text
+Anyone with the link → Viewer
+```
+
+ไม่ควรเชื่อมบัตรประชาชน ทะเบียนบ้าน เอกสารเงินเดือน หรือเอกสารภายในที่มีข้อมูลลูกค้า/บริษัท
