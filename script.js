@@ -22,12 +22,12 @@
       experienceLabel: "Experience",
       experienceTitle: "Roles built around coordination, clarity and execution.",
       experienceSummary: "Experience across healthcare service operations, people development, compliance and biomedical research.",
-      projectsLabel: "Selected projects",
-      projectsTitle: "Three ways I support service transformation.",
-      projectsSummary: "Cards are organized as a catalog: they can be reordered, hidden or highlighted without editing the page layout.",
+      projectsLabel: "Projects",
+      projectsTitle: "Projects with clear impact, visuals and references.",
+      projectsSummary: "People development, service development and operation support.",
       credentialsLabel: "Certificates & activities",
       credentialsTitle: "Technical credibility and external learning.",
-      credentialsSummary: "Certificates focus on medical-device and ISO/IEC 17025 knowledge; activities focus on expos, summits, external visits and workshops.",
+      credentialsSummary: "Medical-device, ISO/IEC 17025 and digital credentials, plus selected external learning.",
       certificates: "Certificates",
       certificatesHint: "Selected technical and digital credentials",
       externalActivities: "External activities",
@@ -57,12 +57,12 @@
       experienceLabel: "ประสบการณ์",
       experienceTitle: "บทบาทที่เน้นการประสานงาน ความชัดเจน และการส่งมอบผลลัพธ์",
       experienceSummary: "ประสบการณ์ด้านการดำเนินงานบริการสุขภาพ การพัฒนาบุคลากร มาตรฐาน และงานวิจัยชีวการแพทย์",
-      projectsLabel: "ผลงานที่คัดเลือก",
-      projectsTitle: "3 มิติของการสนับสนุน Service Transformation",
-      projectsSummary: "การ์ดผลงานจัดเป็น Catalog สามารถเปลี่ยนลำดับ ซ่อน หรือเลือก Highlight ได้โดยไม่ต้องแก้โครงหน้าเว็บ",
+      projectsLabel: "ผลงาน",
+      projectsTitle: "ผลงานพร้อมผลลัพธ์ ภาพตัวอย่าง และแหล่งอ้างอิง",
+      projectsSummary: "People Development, Service Development และ Operation Support",
       credentialsLabel: "ประกาศนียบัตรและกิจกรรม",
       credentialsTitle: "ความน่าเชื่อถือทางเทคนิคและการเรียนรู้ภายนอกองค์กร",
-      credentialsSummary: "ส่วนประกาศนียบัตรเน้นความรู้เครื่องมือแพทย์และ ISO/IEC 17025 ส่วนกิจกรรมเน้น Expo, Summit, Visit และ Workshop ภายนอก",
+      credentialsSummary: "ประกาศนียบัตรด้านเครื่องมือแพทย์ ISO/IEC 17025 และดิจิทัล พร้อมกิจกรรมการเรียนรู้ภายนอก",
       certificates: "ประกาศนียบัตร",
       certificatesHint: "คัดเลือกด้านเทคนิคและดิจิทัล",
       externalActivities: "กิจกรรมภายนอก",
@@ -110,7 +110,7 @@
     const label = data.settings.showSourceLabels ? source.label : UI[language].openSource;
     return `
       <a class="source-link" href="${escapeHTML(source.url)}" target="_blank" rel="noopener noreferrer" title="${escapeHTML(source.id || source.label || "Source")}">
-        <span>${escapeHTML(label)}</span><span aria-hidden="true">↗</span>
+        <span class="source-copy"><strong>${escapeHTML(label)}</strong><small>${escapeHTML((source.type || "source").toUpperCase())} · ${escapeHTML(source.id || "Reference")}</small></span><span aria-hidden="true">↗</span>
       </a>`;
   }
 
@@ -137,6 +137,7 @@
     setText("#heroCompany", data.hero.company);
     setText("#heroKicker", localized(data.hero.kicker));
     setText("#heroTitle", localized(data.hero.title));
+    setText("#heroSecondaryName", localized(data.hero.secondaryName));
     setText("#heroLead", localized(data.hero.lead));
     document.querySelector("#resumeButton").hidden = data.settings.showResume === false;
     document.querySelector("#resumeButton").href = data.meta.resumeUrl;
@@ -185,15 +186,20 @@
       const trackId = `track-${group.id}`;
       const cards = sortVisible(group.projects).map((project, index) => `
         <article class="project-card ${project.featured ? "featured" : ""}">
-          <div class="project-top">
-            <span class="project-index">${String(index + 1).padStart(2, "0")}</span>
-            ${project.featured ? `<span class="featured-label">${escapeHTML(UI[language].featured)}</span>` : ""}
+          <div class="project-visual">
+            <img src="${escapeHTML(project.image || "assets/project-dashboard.jpg")}" alt="${escapeHTML(localized(project.imageAlt) || localized(project.title))}" loading="lazy">
+            <div class="project-visual-overlay">
+              <span class="project-index">${String(index + 1).padStart(2, "0")}</span>
+              ${project.featured ? `<span class="featured-label">${escapeHTML(UI[language].featured)}</span>` : ""}
+            </div>
           </div>
-          <h4>${escapeHTML(localized(project.title))}</h4>
-          <p>${escapeHTML(localized(project.summary))}</p>
-          <p class="project-result"><strong>${escapeHTML(UI[language].result)}:</strong> ${escapeHTML(localized(project.result))}</p>
-          <div class="tag-row">${project.tags.map((tag) => `<span class="tag">${escapeHTML(localized(tag))}</span>`).join("")}</div>
-          ${sourceLink(project.source)}
+          <div class="project-content">
+            <h4>${escapeHTML(localized(project.title))}</h4>
+            <p class="project-result"><strong>${escapeHTML(UI[language].result)}</strong><span>${escapeHTML(localized(project.result))}</span></p>
+            <p class="project-summary">${escapeHTML(localized(project.summary))}</p>
+            <div class="tag-row">${project.tags.map((tag) => `<span class="tag">${escapeHTML(localized(tag))}</span>`).join("")}</div>
+            ${sourceLink(project.source)}
+          </div>
         </article>`).join("");
       return `
         <section class="project-group reveal" aria-labelledby="heading-${escapeHTML(group.id)}">
@@ -215,10 +221,16 @@
   function renderCredentials() {
     document.querySelector("#certificatesTrack").innerHTML = sortVisible(data.certificates).map((item) => `
       <article class="credential-card">
-        <div class="card-meta"><span>${escapeHTML(item.year)}</span><span class="card-type">${item.featured ? escapeHTML(UI[language].featured) : "Certificate"}</span></div>
-        <h4>${escapeHTML(localized(item.title))}</h4>
-        <p>${escapeHTML(localized(item.issuer))}</p>
-        ${sourceLink(item.source)}
+        <a class="credential-preview" href="${escapeHTML(item.source?.url || "#")}" target="_blank" rel="noopener noreferrer">
+          <img src="${escapeHTML(item.image || "assets/cert-uncertainty.jpg")}" alt="${escapeHTML(localized(item.imageAlt) || localized(item.title))}" loading="lazy">
+          <span>${escapeHTML(item.year)}</span>
+        </a>
+        <div class="credential-content">
+          <div class="card-meta"><span class="card-type">${item.featured ? escapeHTML(UI[language].featured) : "Certificate"}</span></div>
+          <h4>${escapeHTML(localized(item.title))}</h4>
+          <p>${escapeHTML(localized(item.issuer))}</p>
+          ${sourceLink(item.source)}
+        </div>
       </article>`).join("");
 
     document.querySelector("#activitiesTrack").innerHTML = sortVisible(data.activities).map((item) => `

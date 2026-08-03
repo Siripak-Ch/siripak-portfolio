@@ -201,3 +201,19 @@ Anyone with the link → Viewer
 ```
 
 ไม่ควรเชื่อมบัตรประชาชน ทะเบียนบ้าน เอกสารเงินเดือน หรือเอกสารภายในที่มีข้อมูลลูกค้า/บริษัท
+
+## V2.1 visual update
+
+- Hero uses the bilingual name and a concise professional key message.
+- Every project supports an `image` field in `data/portfolio-data.js`.
+- Project cards display Impact before the project description and show the source type/ID.
+- Certificate cards display a local certificate preview image.
+- Catalog Manager includes fields for project and certificate preview images.
+
+Example:
+
+```javascript
+image: "assets/project-example.jpg"
+```
+
+Place the image in `assets/`, update the path through `catalog.html`, download the revised data file, and replace `data/portfolio-data.js`.

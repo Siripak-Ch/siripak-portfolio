@@ -62,14 +62,16 @@
         field("Summary EN", `${path}.summary.en`, item.summary?.en || "", true),
         field("Summary TH", `${path}.summary.th`, item.summary?.th || "", true),
         field("Result EN", `${path}.result.en`, item.result?.en || "", true),
-        field("Result TH", `${path}.result.th`, item.result?.th || "", true)
+        field("Result TH", `${path}.result.th`, item.result?.th || "", true),
+        field("Preview image", `${path}.image`, item.image || "")
       );
     }
     if (kind === "certificate") {
       common.push(
         field("Issuer EN", `${path}.issuer.en`, item.issuer?.en || ""),
         field("Issuer TH", `${path}.issuer.th`, item.issuer?.th || ""),
-        field("Year", `${path}.year`, item.year || "")
+        field("Year", `${path}.year`, item.year || ""),
+        field("Certificate preview image", `${path}.image`, item.image || "")
       );
     }
     if (kind === "activity") {
@@ -122,6 +124,8 @@
           ${field("Hero kicker TH", "hero.kicker.th", state.hero.kicker.th)}
           ${field("Hero title EN", "hero.title.en", state.hero.title.en, true)}
           ${field("Hero title TH", "hero.title.th", state.hero.title.th, true)}
+          ${field("Secondary name EN", "hero.secondaryName.en", state.hero.secondaryName?.en || "")}
+          ${field("Secondary name TH", "hero.secondaryName.th", state.hero.secondaryName?.th || "")}
           ${field("Hero lead EN", "hero.lead.en", state.hero.lead.en, true)}
           ${field("Hero lead TH", "hero.lead.th", state.hero.lead.th, true)}
           ${field("Current role EN", "hero.role.en", state.hero.role.en)}
@@ -304,6 +308,7 @@
       featured: false,
       order: 999,
       title: { en: "New item", th: "รายการใหม่" },
+      image: "assets/project-dashboard.jpg",
       source: { type: "drive", label: "Google Drive", id: "", url: "" }
     };
     if (activeTab === "profile") {
