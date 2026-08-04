@@ -15,6 +15,8 @@
     profile: ["Profile & Experience", "แก้ข้อความหลัก About และเรียงลำดับประสบการณ์"],
     projects: ["Projects", "ลากการ์ดเพื่อเรียงลำดับ และเลือก Visible / Highlight"],
     certificates: ["Certificates", "จัดลำดับประกาศนียบัตรและตรวจลิงก์เอกสาร"],
+    stepforward: ["STEP FORWARD", "จัดลำดับประกาศนียบัตร Upskill / Reskill"],
+    evidence: ["Coursework & Work Summaries", "จัดการผลงานการศึกษาและเอกสารสรุปงาน"],
     activities: ["Activities", "เลือกเฉพาะ Expo / Summit / Visit / Workshop ที่ต้องการโชว์"],
     sources: ["Drive / Source Map", "ดูว่าแต่ละรายการเชื่อมกับ Drive, GitHub หรือ Resume ใด"],
     settings: ["Settings", "ตั้งค่าข้อมูลติดต่อและการแสดงผลทั่วไป"]
@@ -72,6 +74,12 @@
         field("Issuer TH", `${path}.issuer.th`, item.issuer?.th || ""),
         field("Year", `${path}.year`, item.year || ""),
         field("Certificate preview image", `${path}.image`, item.image || "")
+      );
+    }
+    if (kind === "resource") {
+      common.push(
+        field("Summary EN", `${path}.summary.en`, item.summary?.en || "", true),
+        field("Summary TH", `${path}.summary.th`, item.summary?.th || "", true)
       );
     }
     if (kind === "activity") {
@@ -160,10 +168,22 @@
     content.innerHTML = `<div class="item-list" data-group="${collectionName}">${list.map((item, index) => catalogItem(item, `${collectionName}.${index}`, kind, collectionName)).join("")}</div>`;
   }
 
+  function renderEvidence() {
+    content.innerHTML = (state.knowledgeSections || []).map((group, groupIndex) => `
+      <section class="catalog-group">
+        <div class="group-heading"><h3>${escapeHTML(group.title.en)}</h3><span>${group.items.length} items</span></div>
+        <div class="item-list" data-group="knowledge-${groupIndex}">
+          ${group.items.sort((a,b) => (a.order ?? 999) - (b.order ?? 999)).map((item, index) => catalogItem(item, `knowledgeSections.${groupIndex}.items.${index}`, "resource", `knowledge-${groupIndex}`)).join("")}
+        </div>
+      </section>`).join("");
+  }
+
   function collectSources() {
     const rows = [];
     state.projectGroups.forEach((group) => group.projects.forEach((item) => rows.push({ section: group.title.en, item: item.title.en, source: item.source })));
     state.certificates.forEach((item) => rows.push({ section: "Certificate", item: item.title.en, source: item.source }));
+    (state.stepForwardCertificates || []).forEach((item) => rows.push({ section: "STEP FORWARD", item: item.title.en, source: item.source }));
+    (state.knowledgeSections || []).forEach((group) => group.items.forEach((item) => rows.push({ section: group.title.en, item: item.title.en, source: item.source })));
     state.activities.forEach((item) => rows.push({ section: "Activity", item: item.title.en, source: item.source }));
     return rows.filter((row) => row.source);
   }
@@ -200,6 +220,8 @@
     if (activeTab === "profile") renderProfile();
     if (activeTab === "projects") renderProjects();
     if (activeTab === "certificates") renderFlat("certificates", "certificate");
+    if (activeTab === "stepforward") renderFlat("stepForwardCertificates", "certificate");
+    if (activeTab === "evidence") renderEvidence();
     if (activeTab === "activities") renderFlat("activities", "activity");
     if (activeTab === "sources") renderSources();
     if (activeTab === "settings") renderSettings();
@@ -254,6 +276,9 @@
     } else if (list.dataset.group.startsWith("projects-")) {
       const groupIndex = Number(list.dataset.group.split("-").pop());
       state.projectGroups[groupIndex].projects = items;
+    } else if (list.dataset.group.startsWith("knowledge-")) {
+      const groupIndex = Number(list.dataset.group.split("-").pop());
+      state.knowledgeSections[groupIndex].items = items;
     } else {
       state[list.dataset.group] = items;
     }
@@ -324,7 +349,7 @@
       });
     }
     if (activeTab === "projects") {
-      const groupChoice = Number(prompt("เลือกกลุ่ม: 1 = People Development, 2 = Service Development, 3 = Operation Support", "1")) - 1;
+      const groupChoice = Number(prompt("เลือกกลุ่ม: 1 = People Development, 2 = Service Development", "1")) - 1;
       const groupIndex = Number.isInteger(groupChoice) && groupChoice >= 0 && groupChoice < state.projectGroups.length ? groupChoice : 0;
       template.summary = { en: "", th: "" };
       template.result = { en: "", th: "" };
@@ -335,6 +360,17 @@
       template.issuer = { en: "", th: "" };
       template.year = new Date().getFullYear().toString();
       state.certificates.push(template);
+    }
+    if (activeTab === "stepforward") {
+      template.issuer = { en: "STEP FORWARD", th: "STEP FORWARD" };
+      template.year = "STEP FORWARD";
+      state.stepForwardCertificates.push(template);
+    }
+    if (activeTab === "evidence") {
+      const groupChoice = Number(prompt("เลือกกลุ่ม: 1 = University Coursework, 2 = Work Summaries", "1")) - 1;
+      const groupIndex = Number.isInteger(groupChoice) && groupChoice >= 0 && groupChoice < state.knowledgeSections.length ? groupChoice : 0;
+      template.summary = { en: "", th: "" };
+      state.knowledgeSections[groupIndex].items.push(template);
     }
     if (activeTab === "activities") {
       template.type = { en: "Workshop", th: "Workshop" };

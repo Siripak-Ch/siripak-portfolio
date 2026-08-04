@@ -1,0 +1,11 @@
+{
+  "name": "siripak-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync-drive": "node scripts/sync-drive.mjs"
+  },
+  "dependencies": {
+    "googleapis": "^144.0.0"
+  }
+}

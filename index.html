@@ -12,6 +12,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script defer src="data/portfolio-data.js"></script>
+  <script defer src="data/drive-feed.js"></script>
   <script defer src="script.js"></script>
 </head>
 <body>
@@ -60,13 +61,13 @@
         </div>
 
         <div class="hero-profile reveal">
-          <div class="profile-frame">
+          <div class="profile-frame profile-frame-round">
             <div class="profile-ring" aria-hidden="true"></div>
             <img src="assets/profile.png" alt="Portrait of Siripak Chattanupakorn">
           </div>
-          <div class="profile-note">
-            <small data-ui="currentFocus">Current focus</small>
-            <strong data-ui="focusValue">Healthcare service transformation</strong>
+          <div class="hero-focus-panel">
+            <p class="focus-panel-label" data-ui="areaFocus">Area focus</p>
+            <div class="hero-focus-list" id="heroFocusList"></div>
           </div>
         </div>
       </div>
@@ -117,6 +118,19 @@
       </div>
     </section>
 
+    <section class="section" id="evidence">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow" data-ui="evidenceLabel">Coursework & work summaries</p>
+            <h2 data-ui="evidenceTitle">Selected evidence behind the work.</h2>
+          </div>
+          <p class="section-summary" data-ui="evidenceSummary">University projects, research, business cases and operational summaries.</p>
+        </div>
+        <div class="knowledge-groups" id="knowledgeGroups"></div>
+      </div>
+    </section>
+
     <section class="section" id="projects">
       <div class="container">
         <div class="section-heading reveal">
@@ -151,6 +165,18 @@
           </div>
         </div>
         <div class="horizontal-track credential-track" id="certificatesTrack"></div>
+
+        <div class="subsection-head step-forward-head reveal">
+          <div>
+            <h3 data-ui="stepForward">STEP FORWARD</h3>
+            <p data-ui="stepForwardHint">Upskill & reskill certificates</p>
+          </div>
+          <div class="slider-controls" data-slider-controls="stepForwardTrack">
+            <button type="button" data-direction="prev" aria-label="Previous STEP FORWARD certificates">←</button>
+            <button type="button" data-direction="next" aria-label="Next STEP FORWARD certificates">→</button>
+          </div>
+        </div>
+        <div class="horizontal-track credential-track" id="stepForwardTrack"></div>
 
         <div class="subsection-head activity-head reveal">
           <div>

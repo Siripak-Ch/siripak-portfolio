@@ -1,219 +1,123 @@
-# Siripak Chattanupakorn — Portfolio V2
+# Siripak Chattanupakorn — Professional Portfolio V2.2
 
-เว็บไซต์ Portfolio แบบ Static สำหรับ GitHub Pages ธีม Navy Blue แบบ Professional รองรับภาษาไทย/อังกฤษ และใช้ระบบ Catalog เพื่อจัดการผลงานโดยไม่ต้องแก้โครงหน้าเว็บ
+เว็บไซต์ Portfolio แบบ Static Site สำหรับ GitHub Pages ธีม Professional Blue รองรับภาษาอังกฤษและภาษาไทย
 
-## โครงสร้างไฟล์
+## สิ่งที่เพิ่มใน V2.2
 
-```text
-siripak-portfolio-v2/
-├── .github/workflows/deploy.yml
-├── assets/
-│   ├── profile.png
-│   ├── SIRIPAK-CHATTANUPAKORN-Resume.pdf
-│   └── ...
-├── data/
-│   └── portfolio-data.js       # ข้อมูลทั้งหมดที่แสดงบนเว็บ
-├── catalog.html                # หน้าจัดการ Catalog
-├── catalog.css
-├── catalog.js
-├── drive-source-map.csv        # ตารางเชื่อมโยง Drive/GitHub
-├── SOURCE_MAP.md
-├── index.html
-├── styles.css
-├── script.js
-├── 404.html
-└── README.md
-```
+- Hero เปลี่ยนรูปโปรไฟล์เป็นกรอบวงกลม พร้อม Area Focus แบบมืออาชีพ
+- Projects แบ่งเหลือ 2 กลุ่มหลัก: People Development และ Service Development
+- เพิ่ม Project ที่พบจาก Siripak-Workshop Training, Work Summaries และโฟลเดอร์กิจกรรมที่เกี่ยวข้อง
+- เรียง Project ได้สองแบบ: Impact first และ Latest first
+- เพิ่ม University Coursework และ Work Summaries
+- เพิ่ม STEP FORWARD แยกเป็นแถวประกาศนียบัตร พร้อมภาพ Preview
+- ปรับคำแปลภาษาไทยใหม่ให้เป็นภาษาธุรกิจที่เป็นธรรมชาติ
+- Catalog Manager รองรับ Projects, Technical Certificates, STEP FORWARD, Coursework, Work Summaries และ Activities
+- มี Workflow สำหรับ Sync ข้อมูลใหม่จาก Google Drive อัตโนมัติ
 
-## 1) วิธีเลือกว่าจะโชว์อะไรและเรียงอะไรก่อน
+## เปิดดูในเครื่อง
 
-เปิดไฟล์:
-
-```text
-catalog.html
-```
-
-ในหน้า Catalog Manager สามารถ:
-
-- แก้ Hero, About และ Experience ในแท็บ `Profile & Experience`
-- ลากการ์ดขึ้น/ลงเพื่อเปลี่ยนลำดับ
-- เปิดหรือปิด `Visible`
-- เลือก `Highlight`
-- แก้ชื่อและรายละเอียดทั้ง TH/EN
-- แก้ Source URL และ Google Drive ID
-- เพิ่มหรือลบ Project, Certificate และ Activity
-- เปิดแท็บ `Drive / Source Map` เพื่อตรวจว่าแต่ละรายการเชื่อมกับไฟล์หรือโฟลเดอร์ใด
-
-เมื่อแก้เสร็จ กด:
-
-```text
-Download portfolio-data.js
-```
-
-นำไฟล์ที่ดาวน์โหลดไปแทนที่:
-
-```text
-data/portfolio-data.js
-```
-
-จากนั้น Commit ขึ้น GitHub เว็บจะ Deploy ใหม่อัตโนมัติ
-
-> GitHub Pages เป็นเว็บไซต์ Static จึงไม่สามารถกด Save แล้วเขียนเข้า Repository โดยตรงได้โดยไม่เพิ่มระบบ Login/Backend หน้า Catalog นี้จึงใช้วิธี Export ไฟล์ ซึ่งปลอดภัยและดูแลง่ายกว่า
-
-## 2) วิธีแก้ข้อมูลแบบเร็ว
-
-### วิธีที่ง่ายที่สุด
-
-ใช้ `catalog.html` ตามขั้นตอนด้านบน
-
-### วิธีแก้โดยตรง
-
-เปิดไฟล์:
-
-```text
-data/portfolio-data.js
-```
-
-แต่ละรายการมีตัวควบคุมหลัก:
-
-```javascript
-{
-  visible: true,      // false = ไม่แสดงบนเว็บไซต์
-  featured: true,     // true = แสดงเป็นผลงานเด่น
-  order: 1,           // ตัวเลขน้อยแสดงก่อน
-  title: {
-    en: "English title",
-    th: "ชื่อภาษาไทย"
-  },
-  source: {
-    type: "drive",
-    label: "Google Drive · Folder name",
-    id: "GOOGLE_DRIVE_FILE_OR_FOLDER_ID",
-    url: "https://drive.google.com/..."
-  }
-}
-```
-
-## 3) วิธีดูว่าแต่ละการ์ดเชื่อมกับ Drive อะไร
-
-มี 3 วิธี:
-
-1. เปิด `catalog.html` แล้วเลือก `Drive / Source Map`
-2. เปิด `SOURCE_MAP.md`
-3. เปิด `drive-source-map.csv` ด้วย Excel หรือ Google Sheets
-
-ในหน้าเว็บสาธารณะ แต่ละ Project / Certificate / Activity จะแสดงชื่อ Source ด้านล่างการ์ด และกดเปิดเอกสารต้นทางได้
-
-## 4) ข้อมูล Resume ล่าสุด
-
-เว็บไซต์ใช้ Resume ล่าสุดจากไฟล์:
-
-```text
-assets/SIRIPAK-CHATTANUPAKORN-Resume.pdf
-```
-
-เนื้อหาหลักที่อัปเดตแล้ว:
-
-- Current role: Executive, Service Transformation — Jan 2026 to Present
-- Coordinating 8+ concurrent healthcare projects
-- CES Hub and LINE OA workflow improvement
-- 40% YoY revenue-growth contribution
-- Mini MBA in Biomedical Engineering
-- Bachelor of Biomedical Engineering, Mahidol University
-- TOEIC 915
-
-เมื่อต้องการเปลี่ยน Resume ให้แทนที่ไฟล์เดิมโดยใช้ชื่อเดิม เพื่อไม่ต้องแก้ลิงก์ในเว็บไซต์
-
-## 5) ภาษาไทยและอังกฤษ
-
-ปุ่ม `EN / TH` อยู่ด้านขวาบนของเว็บไซต์ ระบบจำภาษาล่าสุดด้วย Browser Local Storage
-
-ข้อความทั้งหมดอยู่ใน `data/portfolio-data.js` เป็นคู่:
-
-```javascript
-title: {
-  en: "Project Portfolio Coordination",
-  th: "การประสานพอร์ตโครงการ"
-}
-```
-
-## 6) โครงสร้างหน้าเว็บไซต์
-
-1. About — Key success, ability, focus areas และ education
-2. Experience
-3. Projects
-   - People Development
-   - Service Development
-   - Operation Support
-4. Certificates & External Activities
-5. Contact
-
-Project แต่ละหมวดเป็น Horizontal Slider มีปุ่มเลื่อนซ้าย/ขวา และรองรับการ Swipe บนมือถือ
-
-## 7) Deploy ขึ้น GitHub Pages
-
-### อัปโหลดผ่านเว็บไซต์ GitHub
-
-1. สร้าง Public Repository เช่น `siripak-portfolio`
-2. อัปโหลดไฟล์และโฟลเดอร์ทั้งหมด รวม `.github`
-3. Commit เข้า Branch `main`
-4. ไปที่ `Settings → Pages`
-5. เลือก `Source: GitHub Actions`
-6. เปิดแท็บ `Actions` และรอ Workflow เป็นสีเขียว
-
-URL จะมีรูปแบบ:
-
-```text
-https://YOUR-USERNAME.github.io/siripak-portfolio/
-```
-
-### อัปเดตผ่าน Command Line
-
-```bash
-git add .
-git commit -m "Update portfolio catalog"
-git push
-```
-
-GitHub Actions จะ Deploy ใหม่โดยอัตโนมัติ
-
-## 8) Preview ในเครื่อง
-
-แนะนำให้รัน Local Server:
+เปิด Terminal ที่โฟลเดอร์นี้แล้วรัน:
 
 ```bash
 python -m http.server 8000
 ```
 
-เปิด:
+จากนั้นเปิด:
 
 ```text
-http://localhost:8000/
+http://localhost:8000
+```
+
+Catalog Manager:
+
+```text
 http://localhost:8000/catalog.html
 ```
 
-## 9) Privacy และ Google Drive
+## Deploy ด้วย GitHub Pages
 
-ก่อนเผยแพร่ ให้ตั้ง Share เฉพาะไฟล์หรือโฟลเดอร์ที่ต้องการเปิดเผยเป็น:
+1. อัปโหลดไฟล์ทั้งหมดไปยัง Repository โดยให้ `index.html` อยู่ที่ root
+2. ไปที่ `Settings → Pages`
+3. เลือก `Source: GitHub Actions`
+4. เปิดแท็บ `Actions` และรอ Workflow `Deploy portfolio to GitHub Pages` ทำงานเสร็จ
+
+ทุกครั้งที่ Push เข้า branch `main` เว็บไซต์จะ Deploy ใหม่อัตโนมัติ
+
+## แก้ข้อมูลแบบง่าย
+
+เปิด `catalog.html` แล้วแก้ข้อมูล ลากเรียง เปิด/ปิด Visible หรือ Highlight จากนั้นกด:
 
 ```text
-Anyone with the link → Viewer
+Download portfolio-data.js
 ```
 
-ไม่ควรเชื่อมบัตรประชาชน ทะเบียนบ้าน เอกสารเงินเดือน หรือเอกสารภายในที่มีข้อมูลลูกค้า/บริษัท
+นำไฟล์ที่ได้ไปแทนที่:
 
-## V2.1 visual update
-
-- Hero uses the bilingual name and a concise professional key message.
-- Every project supports an `image` field in `data/portfolio-data.js`.
-- Project cards display Impact before the project description and show the source type/ID.
-- Certificate cards display a local certificate preview image.
-- Catalog Manager includes fields for project and certificate preview images.
-
-Example:
-
-```javascript
-image: "assets/project-example.jpg"
+```text
+data/portfolio-data.js
 ```
 
-Place the image in `assets/`, update the path through `catalog.html`, download the revised data file, and replace `data/portfolio-data.js`.
+แล้ว Commit และ Push ขึ้น GitHub
+
+## Sync จาก Google Drive อัตโนมัติ
+
+เว็บไซต์ Static ไม่สามารถอ่าน Google Drive ส่วนตัวโดยตรงจาก Browser ได้ จึงมี GitHub Action ชื่อ:
+
+```text
+.github/workflows/sync-drive.yml
+```
+
+Workflow จะอ่าน:
+
+- `Siripak-Workshop Training`
+- `STEPFORWARD`
+
+แล้วสร้างข้อมูลเพิ่มใน:
+
+```text
+data/drive-feed.js
+assets/drive-sync/
+```
+
+### ตั้งค่า Google Drive Service Account
+
+1. สร้าง Project ใน Google Cloud
+2. เปิด Google Drive API
+3. สร้าง Service Account และดาวน์โหลด JSON Key
+4. แชร์สองโฟลเดอร์ Drive ให้ Email ของ Service Account เป็น Viewer
+5. ใน GitHub Repository ไปที่ `Settings → Secrets and variables → Actions`
+6. เพิ่ม Secret ชื่อ:
+
+```text
+GOOGLE_DRIVE_CREDENTIALS
+```
+
+7. วาง JSON Key ทั้งหมดเป็นค่า Secret
+8. ไปที่ `Actions → Sync portfolio from Google Drive → Run workflow`
+
+ระบบจะตรวจทุกวันเวลา 08:15 น. ตามเวลาไทย และ Commit รายการใหม่ให้อัตโนมัติ
+
+รายการที่ Sync อัตโนมัติจะใช้ข้อความเบื้องต้นก่อน ควรเปิด Catalog Manager เพื่อปรับ Impact และคำแปลให้เหมาะกับ Portfolio
+
+## โครงสร้างสำคัญ
+
+```text
+index.html                         หน้า Portfolio
+styles.css                        รูปแบบเว็บไซต์
+script.js                         Render, ภาษา, Slider และ Sort
+catalog.html / catalog.js         ระบบจัดการ Content
+
+data/portfolio-data.js           ข้อมูลหลักที่แก้ด้วย Catalog
+data/drive-feed.js                ข้อมูลใหม่จาก Drive Sync
+
+scripts/sync-drive.mjs            Script อ่าน Google Drive
+.github/workflows/deploy.yml      Deploy GitHub Pages
+.github/workflows/sync-drive.yml  Sync Google Drive
+
+SOURCE_MAP.md                     ตารางเชื่อมโยง Source
+drive-source-map.csv              Source Map สำหรับ Excel
+```
+
+## ความเป็นส่วนตัว
+
+ก่อนเปิดเว็บไซต์สาธารณะ ควรตรวจว่าลิงก์ Drive เชื่อมเฉพาะเอกสารที่อนุญาตให้เปิดเผย และไม่ควรใส่บัตรประชาชน ทะเบียนบ้าน Transcript ฉบับเต็ม หรือข้อมูลส่วนบุคคลที่ไม่จำเป็น

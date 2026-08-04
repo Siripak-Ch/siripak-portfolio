@@ -12,73 +12,105 @@
       portfolioLabel: "Professional Portfolio",
       exploreWork: "Explore work",
       viewResume: "View résumé",
-      currentFocus: "Current focus",
-      focusValue: "Healthcare service transformation",
+      areaFocus: "Area focus",
       aboutLabel: "About me",
       focusAreas: "Focus areas",
-      focusAreasHint: "Where I create value",
+      focusAreasHint: "Where I create measurable value",
       education: "Education",
-      educationHint: "Business + engineering foundation",
+      educationHint: "Business and engineering foundation",
       experienceLabel: "Experience",
-      experienceTitle: "Roles built around coordination, clarity and execution.",
-      experienceSummary: "Experience across healthcare service operations, people development, compliance and biomedical research.",
+      experienceTitle: "Experience built around coordination, clarity and execution.",
+      experienceSummary: "Healthcare service operations, people development, quality systems and biomedical research.",
+      evidenceLabel: "Coursework & work summaries",
+      evidenceTitle: "Selected evidence behind the work.",
+      evidenceSummary: "University projects, research, business cases and operational summaries.",
       projectsLabel: "Projects",
-      projectsTitle: "Projects with clear impact, visuals and references.",
-      projectsSummary: "People development, service development and operation support.",
+      projectsTitle: "People and service development with visible impact.",
+      projectsSummary: "All selected work is grouped into two practical portfolios and can be sorted by impact or date.",
       credentialsLabel: "Certificates & activities",
       credentialsTitle: "Technical credibility and external learning.",
-      credentialsSummary: "Medical-device, ISO/IEC 17025 and digital credentials, plus selected external learning.",
-      certificates: "Certificates",
-      certificatesHint: "Selected technical and digital credentials",
+      credentialsSummary: "Medical-device, ISO/IEC 17025, digital and professional credentials, plus selected external learning.",
+      certificates: "Technical & digital certificates",
+      certificatesHint: "Selected credentials with certificate previews",
+      stepForward: "STEP FORWARD",
+      stepForwardHint: "Upskill & reskill certificates",
       externalActivities: "External activities",
       externalActivitiesHint: "Expo · Summit · Visit · Workshop",
       contactLabel: "Contact",
-      contactSupport: "Available for project coordination, service-development and healthcare operations opportunities.",
+      contactSupport: "Available for healthcare project coordination, service development and digital-improvement opportunities.",
       backToTop: "Back to top ↑",
       featured: "Highlighted",
-      result: "Result",
+      result: "Impact",
       openSource: "Open source",
       email: "Email",
       phone: "Phone",
       linkedin: "LinkedIn",
-      location: "Location"
+      location: "Location",
+      sortImpact: "Impact first",
+      sortLatest: "Latest first",
+      sourceEvidence: "Open evidence"
     },
     th: {
-      portfolioLabel: "แฟ้มสะสมผลงาน",
+      portfolioLabel: "แฟ้มสะสมผลงานวิชาชีพ",
       exploreWork: "ดูผลงาน",
       viewResume: "ดูเรซูเม่",
-      currentFocus: "งานที่มุ่งเน้น",
-      focusValue: "การพัฒนาบริการสุขภาพ",
+      areaFocus: "ด้านที่มุ่งเน้น",
       aboutLabel: "เกี่ยวกับฉัน",
       focusAreas: "ความเชี่ยวชาญหลัก",
-      focusAreasHint: "ด้านที่สร้างคุณค่า",
+      focusAreasHint: "ด้านที่สร้างคุณค่าและผลลัพธ์ที่วัดได้",
       education: "การศึกษา",
-      educationHint: "พื้นฐานธุรกิจและวิศวกรรม",
+      educationHint: "พื้นฐานด้านธุรกิจและวิศวกรรม",
       experienceLabel: "ประสบการณ์",
-      experienceTitle: "บทบาทที่เน้นการประสานงาน ความชัดเจน และการส่งมอบผลลัพธ์",
-      experienceSummary: "ประสบการณ์ด้านการดำเนินงานบริการสุขภาพ การพัฒนาบุคลากร มาตรฐาน และงานวิจัยชีวการแพทย์",
+      experienceTitle: "ประสบการณ์ที่ขับเคลื่อนด้วยการประสานงาน ความชัดเจน และการส่งมอบผลลัพธ์",
+      experienceSummary: "ครอบคลุมการดำเนินงานบริการสุขภาพ การพัฒนาบุคลากร ระบบคุณภาพ และงานวิจัยชีวการแพทย์",
+      evidenceLabel: "ผลงานการศึกษาและสรุปงาน",
+      evidenceTitle: "หลักฐานผลงานที่สะท้อนกระบวนการคิดและการทำงาน",
+      evidenceSummary: "โครงงานระหว่างการศึกษา งานวิจัย กรณีธุรกิจ และเอกสารสรุปการดำเนินงาน",
       projectsLabel: "ผลงาน",
-      projectsTitle: "ผลงานพร้อมผลลัพธ์ ภาพตัวอย่าง และแหล่งอ้างอิง",
-      projectsSummary: "People Development, Service Development และ Operation Support",
+      projectsTitle: "การพัฒนาคนและบริการที่แสดงผลลัพธ์ได้อย่างชัดเจน",
+      projectsSummary: "รวบรวมผลงานเป็น 2 กลุ่มหลัก และเลือกเรียงตามผลกระทบหรือวันที่ได้",
       credentialsLabel: "ประกาศนียบัตรและกิจกรรม",
-      credentialsTitle: "ความน่าเชื่อถือทางเทคนิคและการเรียนรู้ภายนอกองค์กร",
-      credentialsSummary: "ประกาศนียบัตรด้านเครื่องมือแพทย์ ISO/IEC 17025 และดิจิทัล พร้อมกิจกรรมการเรียนรู้ภายนอก",
-      certificates: "ประกาศนียบัตร",
-      certificatesHint: "คัดเลือกด้านเทคนิคและดิจิทัล",
-      externalActivities: "กิจกรรมภายนอก",
-      externalActivitiesHint: "Expo · Summit · Visit · Workshop",
+      credentialsTitle: "ความน่าเชื่อถือทางเทคนิคและการเรียนรู้จากภายนอกองค์กร",
+      credentialsSummary: "ประกาศนียบัตรด้านเครื่องมือแพทย์ ISO/IEC 17025 ดิจิทัล และทักษะวิชาชีพ พร้อมกิจกรรมการเรียนรู้ภายนอก",
+      certificates: "ประกาศนียบัตรด้านเทคนิคและดิจิทัล",
+      certificatesHint: "แสดงภาพตัวอย่างประกาศนียบัตรและแหล่งอ้างอิง",
+      stepForward: "STEP FORWARD",
+      stepForwardHint: "ประกาศนียบัตรการพัฒนาทักษะและยกระดับศักยภาพ",
+      externalActivities: "กิจกรรมภายนอกองค์กร",
+      externalActivitiesHint: "งานแสดงสินค้า · การประชุมสุดยอด · การศึกษาดูงาน · เวิร์กช็อป",
       contactLabel: "ติดต่อ",
-      contactSupport: "เปิดรับโอกาสด้านการประสานโครงการ การพัฒนาบริการ และการดำเนินงานสุขภาพ",
+      contactSupport: "เปิดรับโอกาสด้านการประสานโครงการสุขภาพ การพัฒนาบริการ และการปรับปรุงงานด้วยดิจิทัล",
       backToTop: "กลับด้านบน ↑",
       featured: "ผลงานเด่น",
-      result: "ผลลัพธ์",
+      result: "ผลกระทบ",
       openSource: "เปิดแหล่งข้อมูล",
       email: "อีเมล",
       phone: "โทรศัพท์",
       linkedin: "LinkedIn",
-      location: "สถานที่"
+      location: "สถานที่",
+      sortImpact: "เรียงตามผลกระทบ",
+      sortLatest: "เรียงล่าสุดก่อน",
+      sourceEvidence: "เปิดหลักฐานผลงาน"
     }
   };
+
+  const projectSortModes = Object.fromEntries((data.projectGroups || []).map((group) => [group.id, "impact"]));
+
+  function mergeDriveFeed() {
+    const feed = window.DRIVE_FEED;
+    if (!feed) return;
+    (feed.projects || []).forEach((item) => {
+      const group = data.projectGroups.find((entry) => entry.id === item.groupId);
+      if (!group || group.projects.some((project) => project.id === item.id || project.source?.id === item.source?.id)) return;
+      group.projects.push(item);
+    });
+    data.stepForwardCertificates ||= [];
+    (feed.stepForwardCertificates || []).forEach((item) => {
+      if (data.stepForwardCertificates.some((certificate) => certificate.id === item.id || certificate.source?.id === item.source?.id)) return;
+      data.stepForwardCertificates.push(item);
+    });
+  }
+  mergeDriveFeed();
 
   const getLanguage = () => localStorage.getItem("portfolio-language") || data.meta.defaultLanguage || "en";
   let language = getLanguage();
@@ -99,18 +131,28 @@
     if (element) element.textContent = value;
   }
 
-  function sortVisible(items) {
-    return [...items]
-      .filter((item) => item.visible !== false)
-      .sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
+  function visibleItems(items = []) {
+    return items.filter((item) => item.visible !== false);
   }
 
-  function sourceLink(source) {
+  function sortByOrder(items = []) {
+    return [...visibleItems(items)].sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
+  }
+
+  function sortProjects(items = [], mode = "impact") {
+    const list = visibleItems(items);
+    if (mode === "latest") {
+      return [...list].sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")) || (a.order ?? 999) - (b.order ?? 999));
+    }
+    return [...list].sort((a, b) => Number(Boolean(b.featured)) - Number(Boolean(a.featured)) || (a.order ?? 999) - (b.order ?? 999));
+  }
+
+  function sourceLink(source, compact = false) {
     if (!source?.url) return "";
     const label = data.settings.showSourceLabels ? source.label : UI[language].openSource;
     return `
-      <a class="source-link" href="${escapeHTML(source.url)}" target="_blank" rel="noopener noreferrer" title="${escapeHTML(source.id || source.label || "Source")}">
-        <span class="source-copy"><strong>${escapeHTML(label)}</strong><small>${escapeHTML((source.type || "source").toUpperCase())} · ${escapeHTML(source.id || "Reference")}</small></span><span aria-hidden="true">↗</span>
+      <a class="source-link ${compact ? "compact" : ""}" href="${escapeHTML(source.url)}" target="_blank" rel="noopener noreferrer" title="${escapeHTML(source.id || source.label || "Source")}">
+        <span class="source-copy"><strong>${escapeHTML(label || UI[language].sourceEvidence)}</strong><small>${escapeHTML((source.type || "source").toUpperCase())} · ${escapeHTML(source.id || "Reference")}</small></span><span aria-hidden="true">↗</span>
       </a>`;
   }
 
@@ -146,6 +188,8 @@
         <strong>${escapeHTML(metric.value)}</strong>
         <span>${escapeHTML(localized(metric.label))}</span>
       </div>`).join("");
+    document.querySelector("#heroFocusList").innerHTML = (data.hero.areaFocus || []).map((item) => `
+      <div class="hero-focus-item"><span aria-hidden="true">✓</span><strong>${escapeHTML(localized(item))}</strong></div>`).join("");
   }
 
   function renderAbout() {
@@ -167,7 +211,7 @@
   }
 
   function renderExperience() {
-    document.querySelector("#experienceList").innerHTML = sortVisible(data.experience).map((item) => `
+    document.querySelector("#experienceList").innerHTML = sortByOrder(data.experience).map((item) => `
       <article class="experience-card reveal">
         <div>
           <div class="experience-period">${escapeHTML(item.period)}</div>
@@ -181,26 +225,51 @@
       </article>`).join("");
   }
 
+  function renderKnowledge() {
+    const container = document.querySelector("#knowledgeGroups");
+    container.innerHTML = (data.knowledgeSections || []).map((group) => `
+      <section class="knowledge-group reveal">
+        <div class="knowledge-group-head">
+          <div><h3>${escapeHTML(localized(group.title))}</h3><p>${escapeHTML(localized(group.intro))}</p></div>
+        </div>
+        <div class="knowledge-grid">
+          ${sortByOrder(group.items).map((item) => `
+            <article class="knowledge-card">
+              <div class="knowledge-icon" aria-hidden="true">↗</div>
+              <h4>${escapeHTML(localized(item.title))}</h4>
+              <p>${escapeHTML(localized(item.summary))}</p>
+              ${sourceLink(item.source, true)}
+            </article>`).join("")}
+        </div>
+      </section>`).join("");
+  }
+
+  function projectCard(project, index) {
+    return `
+      <article class="project-card ${project.featured ? "featured" : ""}">
+        <div class="project-visual">
+          <img class="js-image-fallback" src="${escapeHTML(project.image || "assets/project-dashboard.jpg")}" alt="${escapeHTML(localized(project.imageAlt) || localized(project.title))}" loading="lazy">
+          <div class="project-visual-overlay">
+            <span class="project-index">${String(index + 1).padStart(2, "0")}</span>
+            ${project.featured ? `<span class="featured-label">${escapeHTML(UI[language].featured)}</span>` : ""}
+          </div>
+        </div>
+        <div class="project-content">
+          <div class="project-date">${escapeHTML(project.date || "")}</div>
+          <h4>${escapeHTML(localized(project.title))}</h4>
+          <p class="project-result"><strong>${escapeHTML(UI[language].result)}</strong><span>${escapeHTML(localized(project.result))}</span></p>
+          <p class="project-summary">${escapeHTML(localized(project.summary))}</p>
+          <div class="tag-row">${(project.tags || []).map((tag) => `<span class="tag">${escapeHTML(localized(tag))}</span>`).join("")}</div>
+          ${sourceLink(project.source)}
+        </div>
+      </article>`;
+  }
+
   function renderProjects() {
     document.querySelector("#projectGroups").innerHTML = data.projectGroups.map((group) => {
       const trackId = `track-${group.id}`;
-      const cards = sortVisible(group.projects).map((project, index) => `
-        <article class="project-card ${project.featured ? "featured" : ""}">
-          <div class="project-visual">
-            <img src="${escapeHTML(project.image || "assets/project-dashboard.jpg")}" alt="${escapeHTML(localized(project.imageAlt) || localized(project.title))}" loading="lazy">
-            <div class="project-visual-overlay">
-              <span class="project-index">${String(index + 1).padStart(2, "0")}</span>
-              ${project.featured ? `<span class="featured-label">${escapeHTML(UI[language].featured)}</span>` : ""}
-            </div>
-          </div>
-          <div class="project-content">
-            <h4>${escapeHTML(localized(project.title))}</h4>
-            <p class="project-result"><strong>${escapeHTML(UI[language].result)}</strong><span>${escapeHTML(localized(project.result))}</span></p>
-            <p class="project-summary">${escapeHTML(localized(project.summary))}</p>
-            <div class="tag-row">${project.tags.map((tag) => `<span class="tag">${escapeHTML(localized(tag))}</span>`).join("")}</div>
-            ${sourceLink(project.source)}
-          </div>
-        </article>`).join("");
+      const mode = projectSortModes[group.id] || "impact";
+      const cards = sortProjects(group.projects, mode).map(projectCard).join("");
       return `
         <section class="project-group reveal" aria-labelledby="heading-${escapeHTML(group.id)}">
           <div class="project-group-head">
@@ -208,9 +277,15 @@
               <h3 id="heading-${escapeHTML(group.id)}">${escapeHTML(localized(group.title))}</h3>
               <p>${escapeHTML(localized(group.intro))}</p>
             </div>
-            <div class="slider-controls" data-slider-controls="${trackId}">
-              <button type="button" data-direction="prev" aria-label="Previous">←</button>
-              <button type="button" data-direction="next" aria-label="Next">→</button>
+            <div class="project-group-actions">
+              <div class="sort-switch" role="group" aria-label="Project sorting">
+                <button type="button" data-project-sort="impact" data-group-id="${escapeHTML(group.id)}" class="${mode === "impact" ? "active" : ""}">${escapeHTML(UI[language].sortImpact)}</button>
+                <button type="button" data-project-sort="latest" data-group-id="${escapeHTML(group.id)}" class="${mode === "latest" ? "active" : ""}">${escapeHTML(UI[language].sortLatest)}</button>
+              </div>
+              <div class="slider-controls" data-slider-controls="${trackId}">
+                <button type="button" data-direction="prev" aria-label="Previous">←</button>
+                <button type="button" data-direction="next" aria-label="Next">→</button>
+              </div>
             </div>
           </div>
           <div class="horizontal-track" id="${trackId}">${cards}</div>
@@ -218,22 +293,26 @@
     }).join("");
   }
 
-  function renderCredentials() {
-    document.querySelector("#certificatesTrack").innerHTML = sortVisible(data.certificates).map((item) => `
+  function credentialCards(items) {
+    return sortByOrder(items).map((item) => `
       <article class="credential-card">
         <a class="credential-preview" href="${escapeHTML(item.source?.url || "#")}" target="_blank" rel="noopener noreferrer">
-          <img src="${escapeHTML(item.image || "assets/cert-uncertainty.jpg")}" alt="${escapeHTML(localized(item.imageAlt) || localized(item.title))}" loading="lazy">
-          <span>${escapeHTML(item.year)}</span>
+          <img class="js-image-fallback" src="${escapeHTML(item.image || "assets/cert-uncertainty.jpg")}" alt="${escapeHTML(localized(item.imageAlt) || localized(item.title))}" loading="lazy">
+          <span>${escapeHTML(item.year || "")}</span>
         </a>
         <div class="credential-content">
-          <div class="card-meta"><span class="card-type">${item.featured ? escapeHTML(UI[language].featured) : "Certificate"}</span></div>
+          <div class="card-meta"><span class="card-type">${item.featured ? escapeHTML(UI[language].featured) : escapeHTML(localized(item.issuer))}</span></div>
           <h4>${escapeHTML(localized(item.title))}</h4>
           <p>${escapeHTML(localized(item.issuer))}</p>
           ${sourceLink(item.source)}
         </div>
       </article>`).join("");
+  }
 
-    document.querySelector("#activitiesTrack").innerHTML = sortVisible(data.activities).map((item) => `
+  function renderCredentials() {
+    document.querySelector("#certificatesTrack").innerHTML = credentialCards(data.certificates);
+    document.querySelector("#stepForwardTrack").innerHTML = credentialCards(data.stepForwardCertificates || []);
+    document.querySelector("#activitiesTrack").innerHTML = sortByOrder(data.activities).map((item) => `
       <article class="activity-card">
         <div class="card-meta"><span>${escapeHTML(item.date)}</span><span class="card-type">${escapeHTML(localized(item.type))}</span></div>
         <h4>${escapeHTML(localized(item.title))}</h4>
@@ -262,6 +341,7 @@
     renderHero();
     renderAbout();
     renderExperience();
+    renderKnowledge();
     renderProjects();
     renderCredentials();
     renderContact();
@@ -281,13 +361,22 @@
       });
     });
 
+    document.querySelectorAll(".js-image-fallback").forEach((image) => {
+      if (image.dataset.fallbackReady) return;
+      image.dataset.fallbackReady = "true";
+      image.addEventListener("error", () => {
+        if (image.src.endsWith("project-dashboard.jpg")) return;
+        image.src = image.closest(".credential-card") ? "assets/cert-uncertainty.jpg" : "assets/project-dashboard.jpg";
+      }, { once: true });
+    });
+
     const revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         entry.target.classList.add("visible");
         observer.unobserve(entry.target);
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.1 });
     document.querySelectorAll(".reveal:not(.visible)").forEach((element) => revealObserver.observe(element));
 
     const navLinks = [...document.querySelectorAll('.primary-nav a[href^="#"]')];
@@ -300,6 +389,14 @@
     }, { rootMargin: "-35% 0px -55%", threshold: 0 });
     sections.forEach((section) => navObserver.observe(section));
   }
+
+  document.addEventListener("click", (event) => {
+    const sortButton = event.target.closest("button[data-project-sort]");
+    if (!sortButton) return;
+    projectSortModes[sortButton.dataset.groupId] = sortButton.dataset.projectSort;
+    renderProjects();
+    activateInteractions();
+  });
 
   document.querySelectorAll("[data-lang]").forEach((button) => {
     button.addEventListener("click", () => {
