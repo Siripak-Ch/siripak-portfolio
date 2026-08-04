@@ -151,3 +151,12 @@ settings: {
 - Updated People Development covers for New Staff Training, Staff Guideline, Leadership Journey and Competency Training.
 - Updated Service Development covers for Infusion Pump Rental, NEBB, LINE OA, Check Stock, Car Booking and Service CSI.
 - Public Google Drive links and Drive IDs remain hidden.
+
+## Update V2.6 — Compact AI & External Activities
+
+- Reduced the AI Portfolio heading and content density.
+- Converted AI tools and AI-supported outputs into horizontal card sliders with left/right controls.
+- Shortened bilingual descriptions for faster scanning.
+- Added visual cards to External Activities.
+- Added official public-event links for Medtec Southeast Asia 2026 and Cosmoprof CBE ASEAN 2026.
+- Kept Google Drive links hidden from the public website.

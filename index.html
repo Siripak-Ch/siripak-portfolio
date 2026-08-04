@@ -132,9 +132,9 @@
     </section>
 
 
-    <section class="section section-soft" id="ai-portfolio">
+    <section class="section section-soft ai-section" id="ai-portfolio">
       <div class="container">
-        <div class="section-heading reveal">
+        <div class="section-heading ai-section-heading reveal">
           <div>
             <p class="eyebrow" data-ui="aiLabel">AI Portfolio</p>
             <h2 id="aiHeading"></h2>
@@ -144,15 +144,21 @@
 
         <div class="ai-layout">
           <article class="minimal-panel reveal ai-tools-panel">
-            <div class="panel-heading">
-              <h3 id="aiToolsHeading"></h3>
-              <span id="aiToolsHint"></span>
+            <div class="panel-heading ai-slider-heading">
+              <div>
+                <h3 id="aiToolsHeading"></h3>
+                <span id="aiToolsHint"></span>
+              </div>
+              <div class="slider-controls" data-slider-controls="aiToolsGrid">
+                <button type="button" data-direction="prev" aria-label="Previous AI tools">←</button>
+                <button type="button" data-direction="next" aria-label="Next AI tools">→</button>
+              </div>
             </div>
-            <div class="ai-tool-grid" id="aiToolsGrid"></div>
+            <div class="horizontal-track ai-tool-track" id="aiToolsGrid"></div>
           </article>
 
           <article class="minimal-panel reveal ai-showcases-panel">
-            <div class="panel-heading ai-showcase-heading">
+            <div class="panel-heading ai-showcase-heading ai-slider-heading">
               <div>
                 <h3 id="aiShowcasesHeading"></h3>
                 <span id="aiShowcasesHint"></span>

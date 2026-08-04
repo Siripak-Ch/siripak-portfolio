@@ -624,3 +624,150 @@ h1 { margin-bottom: 4px; font-size: clamp(44px, 5vw, 64px); }
   .ai-showcase-card { min-height: 345px; }
   .ai-showcase-visual { height: 165px; }
 }
+
+/* V2.6 — compact AI sliders and visual external activities */
+body { overflow-x: hidden; }
+main, .section, .container, .ai-layout, .minimal-panel { min-width: 0; }
+.horizontal-track { max-width: 100%; }
+
+.ai-section { padding: 44px 0; overflow: hidden; }
+.ai-section-heading {
+  grid-template-columns: minmax(0, .9fr) minmax(260px, .65fr);
+  gap: 34px;
+  margin-bottom: 18px;
+}
+.ai-section-heading h2 {
+  max-width: 520px;
+  font-size: clamp(26px, 2.7vw, 36px);
+  line-height: 1.12;
+}
+.ai-section-heading .section-summary {
+  max-width: 520px;
+  font-size: 12px;
+  line-height: 1.55;
+}
+.ai-layout { display: grid; gap: 14px; }
+.ai-tools-panel, .ai-showcases-panel {
+  min-width: 0;
+  overflow: hidden;
+  padding: 17px;
+}
+.ai-slider-heading {
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 11px;
+}
+.ai-slider-heading > div:first-child { display: grid; gap: 2px; }
+.ai-slider-heading h3 { margin: 0; font-size: 17px; }
+.ai-slider-heading span { color: var(--ink-500); font-size: 10px; }
+.ai-slider-heading .slider-controls { flex: 0 0 auto; }
+.ai-slider-heading .slider-controls button { width: 34px; height: 34px; }
+
+.ai-tool-track {
+  grid-auto-columns: minmax(265px, 31%);
+  gap: 11px;
+  padding: 2px 1px 5px;
+}
+.ai-tool-card {
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  padding: 14px;
+  border-radius: 14px;
+}
+.ai-tool-head { gap: 7px; margin-bottom: 7px; }
+.ai-tool-title { gap: 7px; }
+.ai-tool-head h4 { font-size: 13px; }
+.ai-tool-badge {
+  min-height: 23px;
+  padding: 0 8px;
+  font-size: 8.5px;
+}
+.ai-competency {
+  min-height: 23px;
+  gap: 5px;
+  padding: 0 7px;
+}
+.ai-competency strong { font-size: 8px; }
+.ai-level-icon { height: 11px; }
+.ai-level-icon span { width: 2.5px; }
+.ai-level-icon span:nth-child(1) { height: 4px; }
+.ai-level-icon span:nth-child(2) { height: 7px; }
+.ai-level-icon span:nth-child(3) { height: 10px; }
+.ai-tool-card p {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-top: auto;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.ai-showcase-track {
+  grid-auto-columns: minmax(270px, 30%);
+  gap: 11px;
+  padding: 2px 1px 5px;
+}
+.ai-showcase-card { min-height: 280px; border-radius: 15px; }
+.ai-showcase-visual { height: 132px; }
+.ai-showcase-copy { padding: 13px; }
+.ai-showcase-copy h4 { margin-bottom: 5px; font-size: 13px; line-height: 1.35; }
+.ai-showcase-copy p {
+  -webkit-line-clamp: 2;
+  font-size: 9.5px;
+  line-height: 1.5;
+}
+.ai-showcase-copy .tag-row { gap: 5px; padding-top: 9px; }
+.ai-showcase-copy .tag { padding: 4px 7px; font-size: 8px; }
+
+.activity-track { grid-auto-columns: minmax(275px, 30%); }
+.activity-card-visual {
+  min-height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.activity-visual {
+  height: 155px;
+  overflow: hidden;
+  background: #eaf0f7;
+}
+.activity-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .3s ease;
+}
+.activity-card-visual:hover .activity-visual img { transform: scale(1.025); }
+.activity-content {
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+.activity-content .card-meta { margin-bottom: 11px; }
+.activity-content h4 { margin-bottom: 6px; font-size: 14px; }
+.activity-content > p {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 10px;
+  line-height: 1.55;
+}
+.activity-content .source-link { margin-top: auto; }
+
+@media (max-width: 980px) {
+  .ai-section-heading { grid-template-columns: 1fr; gap: 10px; }
+  .ai-tool-track { grid-auto-columns: minmax(260px, 47%); }
+  .ai-showcase-track, .activity-track { grid-auto-columns: minmax(270px, 47%); }
+}
+@media (max-width: 620px) {
+  .ai-section { padding: 38px 0; }
+  .ai-section-heading h2 { font-size: 28px; }
+  .ai-tools-panel, .ai-showcases-panel { padding: 14px; }
+  .ai-tool-track, .ai-showcase-track, .activity-track { grid-auto-columns: minmax(260px, 88%); }
+  .ai-showcase-card { min-height: 270px; }
+  .activity-visual { height: 145px; }
+}

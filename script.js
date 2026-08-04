@@ -384,11 +384,16 @@
     document.querySelector("#certificatesTrack").innerHTML = credentialCards(data.certificates);
     document.querySelector("#stepForwardTrack").innerHTML = credentialCards(data.stepForwardCertificates || []);
     document.querySelector("#activitiesTrack").innerHTML = sortByOrder(data.activities).map((item) => `
-      <article class="activity-card">
-        <div class="card-meta"><span>${escapeHTML(item.date)}</span><span class="card-type">${escapeHTML(localized(item.type))}</span></div>
-        <h4>${escapeHTML(localized(item.title))}</h4>
-        <p>${escapeHTML(localized(item.summary))}</p>
-        ${sourceLink(item.source)}
+      <article class="activity-card activity-card-visual">
+        <div class="activity-visual">
+          <img class="js-image-fallback" src="${escapeHTML(item.image || "assets/project-dashboard.jpg")}" alt="${escapeHTML(localized(item.imageAlt) || localized(item.title))}" loading="lazy">
+        </div>
+        <div class="activity-content">
+          <div class="card-meta"><span>${escapeHTML(item.date)}</span><span class="card-type">${escapeHTML(localized(item.type))}</span></div>
+          <h4>${escapeHTML(localized(item.title))}</h4>
+          <p>${escapeHTML(localized(item.summary))}</p>
+          ${sourceLink(item.source)}
+        </div>
       </article>`).join("");
   }
 

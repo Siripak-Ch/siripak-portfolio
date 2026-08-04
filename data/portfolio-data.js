@@ -4,7 +4,7 @@ window.PORTFOLIO_DATA = {
     "updated": "2026-08-04",
     "defaultLanguage": "en",
     "resumeUrl": "assets/SIRIPAK-CHATTANUPAKORN-Resume.pdf",
-    "catalogVersion": "2.5-ai"
+    "catalogVersion": "2.6-compact-ai"
   },
   "settings": {
     "showPhone": true,
@@ -1459,19 +1459,26 @@ window.PORTFOLIO_DATA = {
         "th": "Expo"
       },
       "title": {
-        "en": "Medtec 2026",
-        "th": "Medtec 2026"
+        "en": "Medtec Southeast Asia 2026",
+        "th": "Medtec Southeast Asia 2026"
       },
-      "date": "04 Jul 2026",
+      "date": "08–10 Jul 2026",
       "summary": {
-        "en": "Medical-device technology and service trend exploration.",
-        "th": "สำรวจแนวโน้มเทคโนโลยีเครื่องมือแพทย์และบริการ"
+        "en": "Medtech manufacturing, design and healthcare-innovation exhibition.",
+        "th": "งานแสดงเทคโนโลยีการผลิต การออกแบบ และนวัตกรรมเครื่องมือแพทย์"
       },
       "source": {
-        "type": "drive",
-        "label": "Google Drive · Event Folder",
-        "id": "1C3cqr7OrJQqbvbd8-5M-HX6PwEXn_Nq6",
-        "url": "https://drive.google.com/drive/folders/1C3cqr7OrJQqbvbd8-5M-HX6PwEXn_Nq6"
+        "type": "web",
+        "url": "https://inthealthcareweek.com/medtecsea2026",
+        "publicLabel": {
+          "en": "Official event",
+          "th": "เว็บไซต์งานอย่างเป็นทางการ"
+        }
+      },
+      "image": "assets/event-medtec.jpg",
+      "imageAlt": {
+        "en": "Medtec Southeast Asia exhibition floor",
+        "th": "บรรยากาศงาน Medtec Southeast Asia"
       }
     },
     {
@@ -1484,19 +1491,26 @@ window.PORTFOLIO_DATA = {
         "th": "Summit"
       },
       "title": {
-        "en": "AI Summit 2026",
-        "th": "AI Summit 2026"
+        "en": "Cosmoprof CBE ASEAN 2026 — AI & Medical Aesthetics",
+        "th": "Cosmoprof CBE ASEAN 2026 — AI และ Medical Aesthetics"
       },
-      "date": "24 Jun 2026",
+      "date": "24–26 Jun 2026",
       "summary": {
-        "en": "Practical AI use cases for work and service design.",
-        "th": "กรณีใช้งาน AI สำหรับงานและการออกแบบบริการ"
+        "en": "Explored AI-enabled medical aesthetics, beauty technology and service trends.",
+        "th": "สำรวจเทคโนโลยี AI ด้าน Medical Aesthetics นวัตกรรมความงาม และแนวโน้มบริการ"
       },
       "source": {
-        "type": "drive",
-        "label": "Google Drive · Event Folder",
-        "id": "190fZqPYA6sbYEZnTimCkJUpkaKE46RZD",
-        "url": "https://drive.google.com/drive/folders/190fZqPYA6sbYEZnTimCkJUpkaKE46RZD"
+        "type": "web",
+        "url": "https://www.cosmoprofcbeasean.com/",
+        "publicLabel": {
+          "en": "Official event",
+          "th": "เว็บไซต์งานอย่างเป็นทางการ"
+        }
+      },
+      "image": "assets/event-cosmoprof.jpg",
+      "imageAlt": {
+        "en": "AI medical aesthetics booth at Cosmoprof CBE ASEAN 2026",
+        "th": "บูธ AI Medical Aesthetics ภายในงาน Cosmoprof CBE ASEAN 2026"
       }
     },
     {
@@ -1522,6 +1536,11 @@ window.PORTFOLIO_DATA = {
         "label": "Google Drive · Visit Folder",
         "id": "1nM5kxwy6-B69_FZmUyO2hSynfJIBf4Ra",
         "url": "https://drive.google.com/drive/folders/1nM5kxwy6-B69_FZmUyO2hSynfJIBf4Ra"
+      },
+      "image": "assets/project-psu-visit.jpg",
+      "imageAlt": {
+        "en": "PSU knowledge-exchange visit",
+        "th": "ภาพการศึกษาดูงานและแลกเปลี่ยนความรู้ที่ PSU"
       }
     },
     {
@@ -1547,6 +1566,11 @@ window.PORTFOLIO_DATA = {
         "label": "Google Drive · Workshop Folder",
         "id": "1d3OecEDotpJCKDwoyAgKllCuSWWxAkE7",
         "url": "https://drive.google.com/drive/folders/1d3OecEDotpJCKDwoyAgKllCuSWWxAkE7"
+      },
+      "image": "assets/project-customer-training.png",
+      "imageAlt": {
+        "en": "External technical learning program",
+        "th": "กิจกรรมการเรียนรู้ด้านเทคนิคภายนอก"
       }
     },
     {
@@ -1572,6 +1596,11 @@ window.PORTFOLIO_DATA = {
         "label": "Google Drive · Workshop Folder",
         "id": "16DS5lmPXt72HsDnbqzkhzIHhp6mCaJxb",
         "url": "https://drive.google.com/drive/folders/16DS5lmPXt72HsDnbqzkhzIHhp6mCaJxb"
+      },
+      "image": "assets/project-onsite-workflow.png",
+      "imageAlt": {
+        "en": "Smart healthcare system design workshop",
+        "th": "เวิร์กช็อปการออกแบบระบบสุขภาพอัจฉริยะ"
       }
     },
     {
@@ -1597,6 +1626,11 @@ window.PORTFOLIO_DATA = {
         "label": "Google Drive · Visit Folder",
         "id": "1garx0YmSsGY0f43SL8fzV6hZ-vPRuYxN",
         "url": "https://drive.google.com/drive/folders/1garx0YmSsGY0f43SL8fzV6hZ-vPRuYxN"
+      },
+      "image": "assets/project-management-workshop.jpg",
+      "imageAlt": {
+        "en": "External healthcare service visit",
+        "th": "กิจกรรมศึกษาดูงานบริการสุขภาพภายนอก"
       }
     },
     {
@@ -1622,6 +1656,11 @@ window.PORTFOLIO_DATA = {
         "label": "Google Drive · AI Makeover",
         "id": "1pjKYH-BI93ltdO4Y9HPj1hwChUL1S_KU",
         "url": "https://drive.google.com/drive/folders/1pjKYH-BI93ltdO4Y9HPj1hwChUL1S_KU"
+      },
+      "image": "assets/ai-quick-suite.png",
+      "imageAlt": {
+        "en": "External AI workshop",
+        "th": "เวิร์กช็อป AI ภายนอกองค์กร"
       }
     },
     {
@@ -1647,6 +1686,11 @@ window.PORTFOLIO_DATA = {
         "label": "Google Drive · RFS Open House",
         "id": "1Rk2N_mpPR8adDYlQfsvnCJW3vqQ0q6h7",
         "url": "https://drive.google.com/drive/folders/1Rk2N_mpPR8adDYlQfsvnCJW3vqQ0q6h7"
+      },
+      "image": "assets/project-ces-scope-cover.jpg",
+      "imageAlt": {
+        "en": "Facilities and service-system visit",
+        "th": "กิจกรรมเยี่ยมชมระบบอาคารและบริการ"
       }
     }
   ],
@@ -2268,28 +2312,28 @@ window.PORTFOLIO_DATA = {
   },
   "aiPortfolio": {
     "heading": {
-      "en": "Applied AI portfolio for practical work.",
-      "th": "AI Portfolio สำหรับการใช้งานจริงในงาน"
+      "en": "AI applied to real work.",
+      "th": "AI ที่ประยุกต์ใช้กับงานจริง"
     },
     "summary": {
-      "en": "I use AI as a work enabler—supporting analysis, reporting, content creation, workflow design and communication while keeping outputs practical for healthcare-service teams.",
-      "th": "ฉันใช้ AI เป็นเครื่องมือช่วยทำงาน เพื่อสนับสนุนการวิเคราะห์ สรุปรายงาน สร้างสื่อ ออกแบบ workflow และยกระดับการสื่อสาร โดยเน้นให้ผลลัพธ์นำไปใช้ได้จริงกับทีมบริการสุขภาพ"
+      "en": "Seven tools supporting analysis, communication, workflow design and service improvement.",
+      "th": "ใช้เครื่องมือ AI 7 รายการเพื่อสนับสนุนการวิเคราะห์ การสื่อสาร การออกแบบ workflow และการพัฒนาบริการ"
     },
     "toolsHeading": {
       "en": "AI tools in daily use",
       "th": "เครื่องมือ AI ที่ใช้ในการทำงาน"
     },
     "toolsHint": {
-      "en": "What I use and how I apply it",
-      "th": "ใช้ทำอะไร และนำไปใช้อย่างไร"
+      "en": "Tool · use case · competency",
+      "th": "เครื่องมือ · การใช้งาน · ระดับความสามารถ"
     },
     "showcasesHeading": {
       "en": "Examples of AI-supported outputs",
       "th": "ตัวอย่างผลงานที่ใช้ AI สนับสนุน"
     },
     "showcasesHint": {
-      "en": "PR · workflow · reports · training materials",
-      "th": "PR · workflow · รายงาน · สื่อการอบรม"
+      "en": "Selected outputs from daily work",
+      "th": "ผลงานคัดสรรจากการทำงานจริง"
     },
     "tools": [
       {
@@ -2299,8 +2343,8 @@ window.PORTFOLIO_DATA = {
           "th": "วิเคราะห์ข้อมูล · สรุปรายงาน · ทำเว็บไซต์ · ออกแบบ PR"
         },
         "summary": {
-          "en": "Used for data analysis, report summarization, PR ideation, website structure and communication drafts.",
-          "th": "ใช้วิเคราะห์ข้อมูล สรุปรายงาน คิดแนวทางสื่อ PR วางโครงสร้างเว็บไซต์ และช่วยร่างข้อความสื่อสาร"
+          "en": "Analyze data, summarize reports, shape PR content and build website structures.",
+          "th": "วิเคราะห์ข้อมูล สรุปรายงาน วางแนวทางสื่อ PR และโครงสร้างเว็บไซต์"
         },
         "level": "advanced",
         "levelLabel": {
@@ -2315,8 +2359,8 @@ window.PORTFOLIO_DATA = {
           "th": "วิเคราะห์เอกสาร · งานเขียน · template เอกสาร"
         },
         "summary": {
-          "en": "Used to review long documents, improve writing, draft document templates and help design internal systems.",
-          "th": "ใช้วิเคราะห์เอกสารขนาดยาว ปรับปรุงงานเขียน จัดทำ template เอกสาร และช่วยออกแบบระบบงานภายใน"
+          "en": "Review documents, improve writing, create templates and support system design.",
+          "th": "วิเคราะห์เอกสาร ปรับงานเขียน จัดทำ template และช่วยออกแบบระบบ"
         },
         "level": "advanced",
         "levelLabel": {
@@ -2331,8 +2375,8 @@ window.PORTFOLIO_DATA = {
           "th": "Infographic · สื่อ PR · สื่ออบรม"
         },
         "summary": {
-          "en": "Used to create infographics, PR visuals and employee-training materials in a more structured and faster way.",
-          "th": "ใช้สร้าง infographic สื่อประชาสัมพันธ์ และสื่อการอบรมพนักงานให้ทำได้รวดเร็วและเป็นระบบมากขึ้น"
+          "en": "Create infographics, PR visuals and employee-training media.",
+          "th": "สร้าง infographic สื่อประชาสัมพันธ์ และสื่ออบรมพนักงาน"
         },
         "level": "advanced",
         "levelLabel": {
@@ -2347,8 +2391,8 @@ window.PORTFOLIO_DATA = {
           "th": "สรุปข้อมูลรวดเร็ว · ช่วยเขียนอีเมล"
         },
         "summary": {
-          "en": "Used for quick summarization, extracting key points and turning raw information into concise email drafts.",
-          "th": "ใช้สรุปข้อมูลอย่างรวดเร็ว ดึงประเด็นสำคัญ และแปลงข้อมูลดิบให้เป็นอีเมลที่กระชับขึ้น"
+          "en": "Summarize information quickly and draft concise emails.",
+          "th": "สรุปข้อมูลอย่างรวดเร็วและช่วยร่างอีเมลที่กระชับ"
         },
         "level": "intermediate",
         "levelLabel": {
@@ -2363,8 +2407,8 @@ window.PORTFOLIO_DATA = {
           "th": "ออกแบบ workflow"
         },
         "summary": {
-          "en": "Used to map processes, visualize service workflows and improve how teams explain complex work clearly.",
-          "th": "ใช้ทำแผนภาพกระบวนการ มองภาพ workflow การทำงาน และช่วยให้ทีมอธิบายงานที่ซับซ้อนได้ชัดเจนขึ้น"
+          "en": "Map workflows and make complex processes easier to explain.",
+          "th": "จัดทำ workflow และช่วยอธิบายกระบวนการที่ซับซ้อนให้เข้าใจง่าย"
         },
         "level": "intermediate",
         "levelLabel": {
@@ -2379,8 +2423,8 @@ window.PORTFOLIO_DATA = {
           "th": "แนวคิดวิดีโอ · สื่อ PR"
         },
         "summary": {
-          "en": "Used to explore PR video concepts, story ideas and presentation support for communication materials.",
-          "th": "ใช้ทดลองแนวคิดวิดีโอ PR วาง story idea และช่วยต่อยอดสื่อสำหรับการสื่อสาร"
+          "en": "Explore PR-video concepts, story ideas and presentation support.",
+          "th": "ต่อยอดแนวคิดวิดีโอ PR โครงเรื่อง และสื่อการนำเสนอ"
         },
         "level": "intermediate",
         "levelLabel": {
@@ -2395,8 +2439,8 @@ window.PORTFOLIO_DATA = {
           "th": "Local AI สำหรับงานเอกสาร"
         },
         "summary": {
-          "en": "Used as a local-AI support option for document-related work, especially when practical internal processing is needed.",
-          "th": "ใช้เป็นทางเลือกของ local AI สำหรับงานเอกสาร โดยเฉพาะเมื่อจำเป็นต้องประมวลผลข้อมูลภายในอย่างเหมาะสม"
+          "en": "Support local document search, reusable skills and controlled workflows.",
+          "th": "สนับสนุนการค้นหาเอกสารภายในเครื่อง การสร้าง Skills และ workflow ที่ควบคุมได้"
         },
         "level": "advanced",
         "levelLabel": {
@@ -2412,8 +2456,8 @@ window.PORTFOLIO_DATA = {
           "th": "การใช้ AI ช่วยวิเคราะห์และสรุปรายงาน"
         },
         "summary": {
-          "en": "Applied AI to structure EHS follow-up reporting, summarize progress and communicate a clear workflow for owners and management.",
-          "th": "ประยุกต์ใช้ AI เพื่อจัดโครงสร้าง EHS Follow Report สรุปความก้าวหน้า และสื่อสาร workflow ให้ผู้รับผิดชอบและผู้บริหารเข้าใจตรงกัน"
+          "en": "Structured EHS follow-up reports and clearer management updates.",
+          "th": "จัดโครงสร้างรายงาน EHS และสรุปสำหรับผู้บริหารให้ชัดเจนขึ้น"
         },
         "tools": [
           "ChatGPT",
@@ -2428,8 +2472,8 @@ window.PORTFOLIO_DATA = {
           "th": "แดชบอร์ด Service CSI บน CES Hub"
         },
         "summary": {
-          "en": "Used AI-supported analysis and prototyping to organize response KPIs, satisfaction trends, service share and customer-level follow-up.",
-          "th": "ใช้ AI สนับสนุนการวิเคราะห์และทำต้นแบบ เพื่อจัดระบบ KPI การตอบแบบประเมิน แนวโน้มความพึงพอใจ สัดส่วนบริการ และการติดตามระดับลูกค้า"
+          "en": "Organized CSI KPIs, trends and customer follow-up in one dashboard.",
+          "th": "รวม KPI แนวโน้ม และการติดตามลูกค้าไว้ในแดชบอร์ดเดียว"
         },
         "tools": [
           "ChatGPT",
@@ -2444,8 +2488,8 @@ window.PORTFOLIO_DATA = {
           "th": "แดชบอร์ดตรวจสอบเครื่องมือแพทย์ประจำวัน UTH"
         },
         "summary": {
-          "en": "Designed a visual dashboard for daily medical-device readiness, department summaries, filters and management exports.",
-          "th": "ออกแบบแดชบอร์ดสำหรับติดตามความพร้อมของเครื่องมือแพทย์รายวัน สรุปตามแผนก กรองข้อมูล และส่งออกรายงานสำหรับผู้บริหาร"
+          "en": "Visualized daily equipment readiness, filters and report exports.",
+          "th": "แสดงความพร้อมของเครื่องมือรายวัน ตัวกรอง และการส่งออกรายงาน"
         },
         "tools": [
           "ChatGPT",
@@ -2460,8 +2504,8 @@ window.PORTFOLIO_DATA = {
           "th": "การออกแบบ workflow และ process visualization"
         },
         "summary": {
-          "en": "Mapped cross-functional service workflows to clarify handoffs, approvals, reporting points and accountable owners.",
-          "th": "จัดทำแผนภาพกระบวนการข้ามสายงาน เพื่อให้จุดส่งต่องาน การอนุมัติ การรายงาน และผู้รับผิดชอบมีความชัดเจน"
+          "en": "Mapped handoffs, approvals and accountable owners across teams.",
+          "th": "แสดงจุดส่งต่องาน การอนุมัติ และผู้รับผิดชอบระหว่างทีม"
         },
         "tools": [
           "Figma",
@@ -2476,8 +2520,8 @@ window.PORTFOLIO_DATA = {
           "th": "สื่อ PR และสื่ออบรมที่มี AI สนับสนุน"
         },
         "summary": {
-          "en": "Created customer survey campaigns, technical-service PR and employee-training visuals with clearer messages and faster production.",
-          "th": "จัดทำแคมเปญแบบสอบถามลูกค้า สื่อประชาสัมพันธ์บริการเทคนิค และสื่ออบรมพนักงานให้สื่อสารชัดเจนและผลิตได้รวดเร็วขึ้น"
+          "en": "Produced clearer survey, technical-service and training visuals.",
+          "th": "จัดทำสื่อแบบสอบถาม บริการเทคนิค และสื่ออบรมให้ชัดเจนขึ้น"
         },
         "tools": [
           "Canva AI",
@@ -2492,8 +2536,8 @@ window.PORTFOLIO_DATA = {
           "th": "การใช้ AI QuickSuite กับงานเอกสารภายในเครื่อง"
         },
         "summary": {
-          "en": "Explored local-file search, connected work tools, reusable skills, knowledge context and secure document workflows.",
-          "th": "ทดลองใช้การค้นหาไฟล์ภายในเครื่อง การเชื่อมต่อเครื่องมือทำงาน การสร้าง Skills บริบทความรู้ และ workflow เอกสารที่ควบคุมสิทธิ์ได้"
+          "en": "Explored local search, connected tools and reusable document skills.",
+          "th": "ทดลองการค้นหาไฟล์ภายในเครื่อง การเชื่อมต่อ และ Skills สำหรับเอกสาร"
         },
         "tools": [
           "Amazon QuickSuite"
@@ -2506,8 +2550,8 @@ window.PORTFOLIO_DATA = {
           "th": "การออกแบบการเข้าถึง CES Hub ผ่าน LINE OA"
         },
         "summary": {
-          "en": "Used AI to explore user journeys, content structure and a simpler mobile entry point for operational services.",
-          "th": "ใช้ AI ช่วยวิเคราะห์ user journey จัดโครงสร้างเนื้อหา และออกแบบจุดเข้าใช้งานผ่านมือถือสำหรับบริการด้านปฏิบัติการ"
+          "en": "Simplified mobile access and user journeys for operational services.",
+          "th": "ออกแบบการเข้าถึงผ่านมือถือและ user journey ให้ใช้งานง่ายขึ้น"
         },
         "tools": [
           "ChatGPT",
@@ -2522,8 +2566,8 @@ window.PORTFOLIO_DATA = {
           "th": "การสื่อสารขอบเขตบริการด้วย AI"
         },
         "summary": {
-          "en": "Turned complex service information into more visual and sales-ready communication materials.",
-          "th": "เปลี่ยนข้อมูลบริการที่ซับซ้อนให้เป็นสื่อที่เห็นภาพ เข้าใจง่าย และพร้อมใช้สนับสนุนการขายมากขึ้น"
+          "en": "Turned complex service scope into visual, sales-ready materials.",
+          "th": "เปลี่ยนข้อมูลขอบเขตบริการให้เป็นสื่อที่เห็นภาพและพร้อมใช้สนับสนุนการขาย"
         },
         "tools": [
           "Canva AI",
@@ -2537,8 +2581,8 @@ window.PORTFOLIO_DATA = {
           "th": "การวิเคราะห์ความพร้อมและจัดทำสื่อ NEBB"
         },
         "summary": {
-          "en": "Used AI to structure document requirements, risks, timelines and decision points into a clear readiness narrative.",
-          "th": "ใช้ AI ช่วยจัดโครงสร้างข้อกำหนดเอกสาร ความเสี่ยง timeline และประเด็นตัดสินใจให้เป็นเรื่องราวความพร้อมที่เข้าใจง่าย"
+          "en": "Structured requirements, risks, timelines and decision points.",
+          "th": "จัดโครงสร้างข้อกำหนด ความเสี่ยง timeline และประเด็นตัดสินใจ"
         },
         "tools": [
           "Claude",
