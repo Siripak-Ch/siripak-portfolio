@@ -41,14 +41,14 @@
       backToTop: "Back to top ↑",
       featured: "Highlighted",
       result: "Impact",
-      openSource: "Open source",
+      viewProject: "View project",
       email: "Email",
       phone: "Phone",
       linkedin: "LinkedIn",
       location: "Location",
       sortImpact: "Impact first",
       sortLatest: "Latest first",
-      sourceEvidence: "Open evidence"
+      sourceEvidence: "View project"
     },
     th: {
       portfolioLabel: "แฟ้มสะสมผลงานวิชาชีพ",
@@ -73,7 +73,7 @@
       credentialsTitle: "ความน่าเชื่อถือทางเทคนิคและการเรียนรู้จากภายนอกองค์กร",
       credentialsSummary: "ประกาศนียบัตรด้านเครื่องมือแพทย์ ISO/IEC 17025 ดิจิทัล และทักษะวิชาชีพ พร้อมกิจกรรมการเรียนรู้ภายนอก",
       certificates: "ประกาศนียบัตรด้านเทคนิคและดิจิทัล",
-      certificatesHint: "แสดงภาพตัวอย่างประกาศนียบัตรและแหล่งอ้างอิง",
+      certificatesHint: "แสดงภาพตัวอย่างประกาศนียบัตรที่คัดสรร",
       stepForward: "STEP FORWARD",
       stepForwardHint: "ประกาศนียบัตรการพัฒนาทักษะและยกระดับศักยภาพ",
       externalActivities: "กิจกรรมภายนอกองค์กร",
@@ -83,14 +83,14 @@
       backToTop: "กลับด้านบน ↑",
       featured: "ผลงานเด่น",
       result: "ผลกระทบ",
-      openSource: "เปิดแหล่งข้อมูล",
+      viewProject: "ดูรายละเอียดผลงาน",
       email: "อีเมล",
       phone: "โทรศัพท์",
       linkedin: "LinkedIn",
       location: "สถานที่",
       sortImpact: "เรียงตามผลกระทบ",
       sortLatest: "เรียงล่าสุดก่อน",
-      sourceEvidence: "เปิดหลักฐานผลงาน"
+      sourceEvidence: "ดูรายละเอียดผลงาน"
     }
   };
 
@@ -147,13 +147,34 @@
     return [...list].sort((a, b) => Number(Boolean(b.featured)) - Number(Boolean(a.featured)) || (a.order ?? 999) - (b.order ?? 999));
   }
 
+  function isGoogleDriveSource(source) {
+    const type = String(source?.type || "").toLowerCase();
+    const url = String(source?.url || "").toLowerCase();
+    return type === "drive" || url.includes("drive.google.com") || url.includes("docs.google.com");
+  }
+
   function sourceLink(source, compact = false) {
     if (!source?.url) return "";
-    const label = data.settings.showSourceLabels ? source.label : UI[language].openSource;
+    if (data.settings.hideGoogleDriveLinks !== false && isGoogleDriveSource(source)) return "";
+
+    const label = localized(source.publicLabel) || UI[language].viewProject || UI[language].sourceEvidence;
+    const detail = data.settings.showSourceDetails === true
+      ? `<small>${escapeHTML((source.type || "source").toUpperCase())}</small>`
+      : "";
+
     return `
-      <a class="source-link ${compact ? "compact" : ""}" href="${escapeHTML(source.url)}" target="_blank" rel="noopener noreferrer" title="${escapeHTML(source.id || source.label || "Source")}">
-        <span class="source-copy"><strong>${escapeHTML(label || UI[language].sourceEvidence)}</strong><small>${escapeHTML((source.type || "source").toUpperCase())} · ${escapeHTML(source.id || "Reference")}</small></span><span aria-hidden="true">↗</span>
+      <a class="source-link public-source-link ${compact ? "compact" : ""}" href="${escapeHTML(source.url)}" target="_blank" rel="noopener noreferrer">
+        <span class="source-copy"><strong>${escapeHTML(label)}</strong>${detail}</span><span aria-hidden="true">↗</span>
       </a>`;
+  }
+
+  function credentialPreview(item) {
+    const image = `<img class="js-image-fallback" src="${escapeHTML(item.image || "assets/cert-uncertainty.jpg")}" alt="${escapeHTML(localized(item.imageAlt) || localized(item.title))}" loading="lazy"><span>${escapeHTML(item.year || "")}</span>`;
+    const source = item.source;
+    if (source?.url && !(data.settings.hideGoogleDriveLinks !== false && isGoogleDriveSource(source))) {
+      return `<a class="credential-preview" href="${escapeHTML(source.url)}" target="_blank" rel="noopener noreferrer">${image}</a>`;
+    }
+    return `<div class="credential-preview credential-preview-static">${image}</div>`;
   }
 
   function renderNavigation() {
@@ -296,10 +317,7 @@
   function credentialCards(items) {
     return sortByOrder(items).map((item) => `
       <article class="credential-card">
-        <a class="credential-preview" href="${escapeHTML(item.source?.url || "#")}" target="_blank" rel="noopener noreferrer">
-          <img class="js-image-fallback" src="${escapeHTML(item.image || "assets/cert-uncertainty.jpg")}" alt="${escapeHTML(localized(item.imageAlt) || localized(item.title))}" loading="lazy">
-          <span>${escapeHTML(item.year || "")}</span>
-        </a>
+        ${credentialPreview(item)}
         <div class="credential-content">
           <div class="card-meta"><span class="card-type">${item.featured ? escapeHTML(UI[language].featured) : escapeHTML(localized(item.issuer))}</span></div>
           <h4>${escapeHTML(localized(item.title))}</h4>

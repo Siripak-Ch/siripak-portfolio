@@ -499,3 +499,7 @@ h1 { margin-bottom: 4px; font-size: clamp(44px, 5vw, 64px); }
   .sort-switch button { flex: 1; }
   .horizontal-track, .credential-track, .activity-track { grid-auto-columns: minmax(280px, 92%); }
 }
+
+/* Public portfolio: Google Drive links and source IDs are intentionally hidden. */
+.credential-preview-static { cursor: default; }
+.public-source-link .source-copy small { display: none; }

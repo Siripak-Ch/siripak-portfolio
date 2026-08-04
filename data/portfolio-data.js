@@ -4,12 +4,14 @@ window.PORTFOLIO_DATA = {
     "updated": "2026-08-04",
     "defaultLanguage": "en",
     "resumeUrl": "assets/SIRIPAK-CHATTANUPAKORN-Resume.pdf",
-    "catalogVersion": "2.2"
+    "catalogVersion": "2.3"
   },
   "settings": {
     "showPhone": true,
     "showResume": true,
-    "showSourceLabels": true
+    "showSourceLabels": false,
+    "showSourceDetails": false,
+    "hideGoogleDriveLinks": true
   },
   "nav": [
     {

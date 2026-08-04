@@ -1,4 +1,4 @@
-# Siripak Chattanupakorn — Professional Portfolio V2.2
+# Siripak Chattanupakorn — Professional Portfolio V2.3
 
 เว็บไซต์ Portfolio แบบ Static Site สำหรับ GitHub Pages ธีม Professional Blue รองรับภาษาอังกฤษและภาษาไทย
 
@@ -121,3 +121,17 @@ drive-source-map.csv              Source Map สำหรับ Excel
 ## ความเป็นส่วนตัว
 
 ก่อนเปิดเว็บไซต์สาธารณะ ควรตรวจว่าลิงก์ Drive เชื่อมเฉพาะเอกสารที่อนุญาตให้เปิดเผย และไม่ควรใส่บัตรประชาชน ทะเบียนบ้าน Transcript ฉบับเต็ม หรือข้อมูลส่วนบุคคลที่ไม่จำเป็น
+
+
+## Public link privacy
+
+The public website does not display Google Drive links, Drive IDs, file IDs, folder IDs, or source-detail footers. Certificate previews sourced from Drive are rendered as non-clickable images. Internal source metadata remains in the data files only for catalog management and optional Drive Sync.
+
+Settings in `data/portfolio-data.js`:
+
+```js
+settings: {
+  hideGoogleDriveLinks: true,
+  showSourceDetails: false
+}
+```
