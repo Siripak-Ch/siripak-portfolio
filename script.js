@@ -243,16 +243,29 @@
     setText("#aiShowcasesHeading", localized(data.aiPortfolio.showcasesHeading));
     setText("#aiShowcasesHint", localized(data.aiPortfolio.showcasesHint));
 
+    const levelScore = { beginner: 1, intermediate: 2, advanced: 3 };
     const toolsGrid = document.querySelector("#aiToolsGrid");
     if (toolsGrid) {
-      toolsGrid.innerHTML = (data.aiPortfolio.tools || []).map((tool) => `
-        <article class="ai-tool-card">
-          <div class="ai-tool-head">
-            <h4>${escapeHTML(tool.name)}</h4>
-            <span class="ai-tool-badge">${escapeHTML(localized(tool.category))}</span>
-          </div>
-          <p>${escapeHTML(localized(tool.summary))}</p>
-        </article>`).join("");
+      toolsGrid.innerHTML = (data.aiPortfolio.tools || []).map((tool) => {
+        const score = levelScore[tool.level] || 1;
+        const levelBars = [1, 2, 3].map((value) =>
+          `<span class="${value <= score ? "active" : ""}"></span>`
+        ).join("");
+        return `
+          <article class="ai-tool-card">
+            <div class="ai-tool-head">
+              <div class="ai-tool-title">
+                <h4>${escapeHTML(tool.name)}</h4>
+                <div class="ai-competency" aria-label="${escapeHTML(localized(tool.levelLabel))}">
+                  <span class="ai-level-icon" aria-hidden="true">${levelBars}</span>
+                  <strong>${escapeHTML(localized(tool.levelLabel))}</strong>
+                </div>
+              </div>
+              <span class="ai-tool-badge">${escapeHTML(localized(tool.category))}</span>
+            </div>
+            <p>${escapeHTML(localized(tool.summary))}</p>
+          </article>`;
+      }).join("");
     }
 
     const showcaseGrid = document.querySelector("#aiShowcasesGrid");
@@ -260,7 +273,7 @@
       showcaseGrid.innerHTML = (data.aiPortfolio.showcases || []).map((item) => `
         <article class="ai-showcase-card">
           <div class="ai-showcase-visual">
-            <img class="js-image-fallback" src="${escapeHTML(item.image || 'assets/project-dashboard.jpg')}" alt="${escapeHTML(localized(item.title))}" loading="lazy">
+            <img class="js-image-fallback" src="${escapeHTML(item.image || "assets/project-dashboard.jpg")}" alt="${escapeHTML(localized(item.title))}" loading="lazy">
           </div>
           <div class="ai-showcase-copy">
             <h4>${escapeHTML(localized(item.title))}</h4>

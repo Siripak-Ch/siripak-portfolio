@@ -4,7 +4,7 @@ window.PORTFOLIO_DATA = {
     "updated": "2026-08-04",
     "defaultLanguage": "en",
     "resumeUrl": "assets/SIRIPAK-CHATTANUPAKORN-Resume.pdf",
-    "catalogVersion": "2.4-ai"
+    "catalogVersion": "2.5-ai"
   },
   "settings": {
     "showPhone": true,
@@ -469,10 +469,10 @@ window.PORTFOLIO_DATA = {
             "id": "10NIutfUrpiFJz8N1kRd7Vt1y600GnTpv",
             "url": "https://drive.google.com/drive/folders/10NIutfUrpiFJz8N1kRd7Vt1y600GnTpv"
           },
-          "image": "assets/project-new-staff-program.png",
+          "image": "assets/guide.png",
           "imageAlt": {
-            "en": "Preview of CES Staff Guideline 2025",
-            "th": "ภาพตัวอย่างผลงาน คู่มือการปฏิบัติงานบุคลากร CES ปี 2025"
+            "en": "Hospital workplace practice guideline used for CES Staff Guideline 2025",
+            "th": "ภาพแนวทางการปฏิบัติงานในสถานพยาบาลสำหรับคู่มือบุคลากร CES ปี 2025"
           }
         },
         {
@@ -629,10 +629,10 @@ window.PORTFOLIO_DATA = {
             "id": "16GomTQJM9irhjN7NQx-uZCfEahYbUZ1i",
             "url": "https://drive.google.com/drive/folders/16GomTQJM9irhjN7NQx-uZCfEahYbUZ1i"
           },
-          "image": "assets/project-new-staff-program.png",
+          "image": "assets/scope.png",
           "imageAlt": {
-            "en": "Preview of New Staff Training Program 2025",
-            "th": "ภาพตัวอย่างผลงาน โครงการอบรมบุคลากรใหม่ ปี 2025"
+            "en": "Clinical Engineering Service scope used in New Staff Training Program 2025",
+            "th": "ภาพขอบเขตบริการ Clinical Engineering Service สำหรับโครงการอบรมบุคลากรใหม่ ปี 2025"
           }
         },
         {
@@ -669,10 +669,10 @@ window.PORTFOLIO_DATA = {
             "id": "125IxzxlBDazkhMKEONnSkifcV4TtxnUP",
             "url": "https://drive.google.com/drive/folders/125IxzxlBDazkhMKEONnSkifcV4TtxnUP"
           },
-          "image": "assets/workshop-passport.png",
+          "image": "assets/project-ces-workshop-2026.png",
           "imageAlt": {
-            "en": "Preview of Leadership Transformation Journey",
-            "th": "ภาพตัวอย่างผลงาน เส้นทางการพัฒนาภาวะผู้นำ"
+            "en": "CES Workshop 2026 visual used for Leadership Transformation Journey",
+            "th": "ภาพ CES Workshop 2026 สำหรับเส้นทางการพัฒนาภาวะผู้นำ"
           }
         },
         {
@@ -709,10 +709,10 @@ window.PORTFOLIO_DATA = {
             "id": "1jdpoZH3PAg3qKkbqecHUKVNDbF3eM4AC",
             "url": "https://drive.google.com/drive/folders/1jdpoZH3PAg3qKkbqecHUKVNDbF3eM4AC"
           },
-          "image": "assets/project-competency.jpg",
+          "image": "assets/competency.png",
           "imageAlt": {
-            "en": "Preview of Staff Competency & Technical Training",
-            "th": "ภาพตัวอย่างผลงาน การพัฒนาสมรรถนะและการอบรมเชิงเทคนิค"
+            "en": "Laboratory Equipment Calibration Services Competency Test 2025",
+            "th": "หลักสูตร Laboratory Equipment Calibration Services: Competency Test 2025"
           }
         }
       ]
@@ -732,7 +732,7 @@ window.PORTFOLIO_DATA = {
           "id": "rental-spare-parts",
           "visible": true,
           "featured": true,
-          "order": 8,
+          "order": 7,
           "date": "2025-12-31",
           "title": {
             "en": "Spare-parts & Equipment Rental Service Model",
@@ -762,10 +762,10 @@ window.PORTFOLIO_DATA = {
             "id": "resume-2026",
             "url": "assets/SIRIPAK-CHATTANUPAKORN-Resume.pdf"
           },
-          "image": "assets/project-rental-service.jpg",
+          "image": "assets/infusion.png",
           "imageAlt": {
-            "en": "Preview of Spare-parts & Equipment Rental Service Model",
-            "th": "ภาพตัวอย่างผลงาน โมเดลบริการอะไหล่และการให้เช่าอุปกรณ์"
+            "en": "Infusion pump rental service communication",
+            "th": "สื่อบริการเช่า Infusion Pump"
           }
         },
         {
@@ -812,7 +812,7 @@ window.PORTFOLIO_DATA = {
           "id": "ces-hub-line-oa",
           "visible": true,
           "featured": true,
-          "order": 7,
+          "order": 8,
           "date": "2026-07-24",
           "title": {
             "en": "CES Hub & LINE OA Workflow",
@@ -842,10 +842,10 @@ window.PORTFOLIO_DATA = {
             "id": "Siripak-Ch/CES-Hub",
             "url": "https://github.com/Siripak-Ch/CES-Hub"
           },
-          "image": "assets/project-ces-hub.jpg",
+          "image": "assets/line.png",
           "imageAlt": {
-            "en": "Preview of CES Hub & LINE OA Workflow",
-            "th": "ภาพตัวอย่างผลงาน ระบบ CES Hub และกระบวนการเชื่อมต่อ LINE OA"
+            "en": "CES Hub LINE Official Account setup",
+            "th": "ภาพการตั้งค่า CES Hub บน LINE Official Account"
           }
         },
         {
@@ -922,17 +922,17 @@ window.PORTFOLIO_DATA = {
             "id": "1FyH3DUf6BmsjaZDTC4PF1shn8cfoYo7K",
             "url": "https://drive.google.com/file/d/1FyH3DUf6BmsjaZDTC4PF1shn8cfoYo7K/view"
           },
-          "image": "assets/project-audit.jpg",
+          "image": "assets/NEBB.png",
           "imageAlt": {
-            "en": "Preview of NEBB Certification Readiness & Action Plan",
-            "th": "ภาพตัวอย่างผลงาน การวิเคราะห์ความพร้อมและแผนดำเนินการเพื่อขอการรับรอง NEBB"
+            "en": "NEBB certification readiness presentation",
+            "th": "ภาพนำเสนอการเตรียมความพร้อมขอการรับรอง NEBB"
           }
         },
         {
           "id": "audit-readiness",
           "visible": true,
           "featured": true,
-          "order": 9,
+          "order": 11,
           "date": "2025-07-18",
           "title": {
             "en": "Audit Readiness & Compliance Coordination",
@@ -1092,7 +1092,7 @@ window.PORTFOLIO_DATA = {
           "id": "csi-workflow",
           "visible": true,
           "featured": false,
-          "order": 6,
+          "order": 9,
           "date": "2025-07-07",
           "title": {
             "en": "Customer Satisfaction & CSI Communication Workflow",
@@ -1122,17 +1122,17 @@ window.PORTFOLIO_DATA = {
             "id": "1WWB2Pe9KWKK_ms0_OUV9g7M9Coh1SYSw",
             "url": "https://drive.google.com/drive/folders/1WWB2Pe9KWKK_ms0_OUV9g7M9Coh1SYSw"
           },
-          "image": "assets/project-csi-survey-pr.png",
+          "image": "assets/ces-hub-csi.png",
           "imageAlt": {
-            "en": "Preview of Customer Satisfaction & CSI Communication Workflow",
-            "th": "ภาพตัวอย่างผลงาน กระบวนการสื่อสารและติดตามความพึงพอใจของลูกค้า (CSI)"
+            "en": "CES Hub Service CSI dashboard",
+            "th": "ภาพแดชบอร์ด Service CSI บน CES Hub"
           }
         },
         {
           "id": "vehicle-booking",
           "visible": true,
           "featured": false,
-          "order": 11,
+          "order": 12,
           "date": "2025-06-30",
           "title": {
             "en": "Onsite Vehicle Booking Workflow",
@@ -1162,17 +1162,17 @@ window.PORTFOLIO_DATA = {
             "id": "1U47EhkKMi9dSVCGnKFAS0MyaasQDrqZX",
             "url": "https://drive.google.com/drive/folders/1U47EhkKMi9dSVCGnKFAS0MyaasQDrqZX"
           },
-          "image": "assets/project-ces-hub.jpg",
+          "image": "assets/booking.png",
           "imageAlt": {
-            "en": "Preview of Onsite Vehicle Booking Workflow",
-            "th": "ภาพตัวอย่างผลงาน กระบวนการจองรถสำหรับงานนอกสถานที่"
+            "en": "CES Hub onsite vehicle booking workflow",
+            "th": "ภาพกระบวนการจองรถสำหรับงานนอกสถานที่บน CES Hub"
           }
         },
         {
           "id": "parcel-notification",
           "visible": true,
           "featured": false,
-          "order": 12,
+          "order": 13,
           "date": "2025-09-23",
           "title": {
             "en": "Parcel Notification Workflow",
@@ -1202,17 +1202,17 @@ window.PORTFOLIO_DATA = {
             "id": "1gSWnkNHFM0vniRHywT5r6OcJulxH3ZB7",
             "url": "https://drive.google.com/drive/folders/1gSWnkNHFM0vniRHywT5r6OcJulxH3ZB7"
           },
-          "image": "assets/project-catalog-manager.png",
+          "image": "assets/check.png",
           "imageAlt": {
-            "en": "Preview of Parcel Notification Workflow",
-            "th": "ภาพตัวอย่างผลงาน กระบวนการแจ้งเตือนพัสดุ"
+            "en": "CES Hub check-stock and activity-log workflow",
+            "th": "ภาพกระบวนการ Check Stock และ Activity Log บน CES Hub"
           }
         },
         {
           "id": "management-support",
           "visible": true,
           "featured": false,
-          "order": 13,
+          "order": 14,
           "date": "2026-06-09",
           "title": {
             "en": "Management Meeting & Workshop Support",
@@ -1246,6 +1246,45 @@ window.PORTFOLIO_DATA = {
           "imageAlt": {
             "en": "Preview of Management Meeting & Workshop Support",
             "th": "ภาพตัวอย่างผลงาน การสนับสนุนการประชุมผู้บริหารและเวิร์กช็อป"
+          }
+        },
+        {
+          "id": "uth-daily-check",
+          "visible": true,
+          "featured": true,
+          "order": 6,
+          "date": "2026-08-04",
+          "title": {
+            "en": "UTH Daily Medical Equipment Check Dashboard",
+            "th": "ระบบตรวจสอบเครื่องมือแพทย์ประจำวัน โรงพยาบาลอุทัยธานี"
+          },
+          "summary": {
+            "en": "Designed a daily-check dashboard with date and department filters, equipment-status summaries, charts and PDF/Excel export.",
+            "th": "ออกแบบแดชบอร์ดตรวจสอบเครื่องมือแพทย์ประจำวัน พร้อมตัวกรองวันที่และแผนก สรุปสถานะเครื่องมือ กราฟ และการส่งออก PDF/Excel"
+          },
+          "result": {
+            "en": "Improved visibility of device readiness and made department-level follow-up easier and more consistent.",
+            "th": "เพิ่มความชัดเจนด้านความพร้อมใช้งานของเครื่องมือ และทำให้การติดตามระดับแผนกทำได้ง่ายและสม่ำเสมอขึ้น"
+          },
+          "tags": [
+            {
+              "en": "Healthcare Dashboard",
+              "th": "แดชบอร์ดสุขภาพ"
+            },
+            {
+              "en": "Daily Check",
+              "th": "การตรวจสอบประจำวัน"
+            }
+          ],
+          "source": {
+            "type": "internal",
+            "label": "Internal project",
+            "id": "uth-daily-check"
+          },
+          "image": "assets/UTH.png",
+          "imageAlt": {
+            "en": "UTH daily medical equipment check dashboard",
+            "th": "ภาพระบบตรวจสอบเครื่องมือแพทย์ประจำวัน โรงพยาบาลอุทัยธานี"
           }
         }
       ]
@@ -2262,6 +2301,11 @@ window.PORTFOLIO_DATA = {
         "summary": {
           "en": "Used for data analysis, report summarization, PR ideation, website structure and communication drafts.",
           "th": "ใช้วิเคราะห์ข้อมูล สรุปรายงาน คิดแนวทางสื่อ PR วางโครงสร้างเว็บไซต์ และช่วยร่างข้อความสื่อสาร"
+        },
+        "level": "advanced",
+        "levelLabel": {
+          "en": "Advanced",
+          "th": "ระดับสูง"
         }
       },
       {
@@ -2273,6 +2317,11 @@ window.PORTFOLIO_DATA = {
         "summary": {
           "en": "Used to review long documents, improve writing, draft document templates and help design internal systems.",
           "th": "ใช้วิเคราะห์เอกสารขนาดยาว ปรับปรุงงานเขียน จัดทำ template เอกสาร และช่วยออกแบบระบบงานภายใน"
+        },
+        "level": "advanced",
+        "levelLabel": {
+          "en": "Advanced",
+          "th": "ระดับสูง"
         }
       },
       {
@@ -2284,6 +2333,11 @@ window.PORTFOLIO_DATA = {
         "summary": {
           "en": "Used to create infographics, PR visuals and employee-training materials in a more structured and faster way.",
           "th": "ใช้สร้าง infographic สื่อประชาสัมพันธ์ และสื่อการอบรมพนักงานให้ทำได้รวดเร็วและเป็นระบบมากขึ้น"
+        },
+        "level": "advanced",
+        "levelLabel": {
+          "en": "Advanced",
+          "th": "ระดับสูง"
         }
       },
       {
@@ -2295,6 +2349,11 @@ window.PORTFOLIO_DATA = {
         "summary": {
           "en": "Used for quick summarization, extracting key points and turning raw information into concise email drafts.",
           "th": "ใช้สรุปข้อมูลอย่างรวดเร็ว ดึงประเด็นสำคัญ และแปลงข้อมูลดิบให้เป็นอีเมลที่กระชับขึ้น"
+        },
+        "level": "intermediate",
+        "levelLabel": {
+          "en": "Intermediate",
+          "th": "ระดับกลาง"
         }
       },
       {
@@ -2306,6 +2365,11 @@ window.PORTFOLIO_DATA = {
         "summary": {
           "en": "Used to map processes, visualize service workflows and improve how teams explain complex work clearly.",
           "th": "ใช้ทำแผนภาพกระบวนการ มองภาพ workflow การทำงาน และช่วยให้ทีมอธิบายงานที่ซับซ้อนได้ชัดเจนขึ้น"
+        },
+        "level": "intermediate",
+        "levelLabel": {
+          "en": "Intermediate",
+          "th": "ระดับกลาง"
         }
       },
       {
@@ -2317,6 +2381,11 @@ window.PORTFOLIO_DATA = {
         "summary": {
           "en": "Used to explore PR video concepts, story ideas and presentation support for communication materials.",
           "th": "ใช้ทดลองแนวคิดวิดีโอ PR วาง story idea และช่วยต่อยอดสื่อสำหรับการสื่อสาร"
+        },
+        "level": "intermediate",
+        "levelLabel": {
+          "en": "Intermediate",
+          "th": "ระดับกลาง"
         }
       },
       {
@@ -2328,6 +2397,11 @@ window.PORTFOLIO_DATA = {
         "summary": {
           "en": "Used as a local-AI support option for document-related work, especially when practical internal processing is needed.",
           "th": "ใช้เป็นทางเลือกของ local AI สำหรับงานเอกสาร โดยเฉพาะเมื่อจำเป็นต้องประมวลผลข้อมูลภายในอย่างเหมาะสม"
+        },
+        "level": "advanced",
+        "levelLabel": {
+          "en": "Advanced",
+          "th": "ระดับสูง"
         }
       }
     ],
@@ -2335,11 +2409,11 @@ window.PORTFOLIO_DATA = {
       {
         "title": {
           "en": "AI-assisted reporting workflow",
-          "th": "ตัวอย่างการใช้ AI ช่วยวิเคราะห์และสรุปรายงาน"
+          "th": "การใช้ AI ช่วยวิเคราะห์และสรุปรายงาน"
         },
         "summary": {
-          "en": "Applied in report-analysis and workflow explanation, including EHS follow-up reporting and clear step-by-step communication.",
-          "th": "ประยุกต์ใช้กับการวิเคราะห์รายงานและอธิบาย workflow เช่น งาน EHS follow-up report และการสื่อสารขั้นตอนการทำงานให้เข้าใจง่าย"
+          "en": "Applied AI to structure EHS follow-up reporting, summarize progress and communicate a clear workflow for owners and management.",
+          "th": "ประยุกต์ใช้ AI เพื่อจัดโครงสร้าง EHS Follow Report สรุปความก้าวหน้า และสื่อสาร workflow ให้ผู้รับผิดชอบและผู้บริหารเข้าใจตรงกัน"
         },
         "tools": [
           "ChatGPT",
@@ -2350,12 +2424,44 @@ window.PORTFOLIO_DATA = {
       },
       {
         "title": {
-          "en": "Workflow and process visualization",
-          "th": "ตัวอย่างการทำ workflow และ process visualization"
+          "en": "CES Hub Service CSI dashboard",
+          "th": "แดชบอร์ด Service CSI บน CES Hub"
         },
         "summary": {
-          "en": "Used to structure service workflows, align stakeholders and make operational steps easier to understand and follow.",
-          "th": "ใช้จัดโครงสร้าง workflow งานบริการ ช่วยให้ผู้เกี่ยวข้องเข้าใจตรงกัน และทำให้ลำดับขั้นตอนการทำงานติดตามได้ง่ายขึ้น"
+          "en": "Used AI-supported analysis and prototyping to organize response KPIs, satisfaction trends, service share and customer-level follow-up.",
+          "th": "ใช้ AI สนับสนุนการวิเคราะห์และทำต้นแบบ เพื่อจัดระบบ KPI การตอบแบบประเมิน แนวโน้มความพึงพอใจ สัดส่วนบริการ และการติดตามระดับลูกค้า"
+        },
+        "tools": [
+          "ChatGPT",
+          "Claude",
+          "Figma"
+        ],
+        "image": "assets/ces-hub-csi.png"
+      },
+      {
+        "title": {
+          "en": "UTH daily equipment-check dashboard",
+          "th": "แดชบอร์ดตรวจสอบเครื่องมือแพทย์ประจำวัน UTH"
+        },
+        "summary": {
+          "en": "Designed a visual dashboard for daily medical-device readiness, department summaries, filters and management exports.",
+          "th": "ออกแบบแดชบอร์ดสำหรับติดตามความพร้อมของเครื่องมือแพทย์รายวัน สรุปตามแผนก กรองข้อมูล และส่งออกรายงานสำหรับผู้บริหาร"
+        },
+        "tools": [
+          "ChatGPT",
+          "Claude",
+          "Figma"
+        ],
+        "image": "assets/UTH.png"
+      },
+      {
+        "title": {
+          "en": "Workflow and process visualization",
+          "th": "การออกแบบ workflow และ process visualization"
+        },
+        "summary": {
+          "en": "Mapped cross-functional service workflows to clarify handoffs, approvals, reporting points and accountable owners.",
+          "th": "จัดทำแผนภาพกระบวนการข้ามสายงาน เพื่อให้จุดส่งต่องาน การอนุมัติ การรายงาน และผู้รับผิดชอบมีความชัดเจน"
         },
         "tools": [
           "Figma",
@@ -2367,11 +2473,11 @@ window.PORTFOLIO_DATA = {
       {
         "title": {
           "en": "AI-supported PR and training media",
-          "th": "ตัวอย่างสื่อ PR และสื่ออบรมที่มี AI ช่วยสนับสนุน"
+          "th": "สื่อ PR และสื่ออบรมที่มี AI สนับสนุน"
         },
         "summary": {
-          "en": "Used to create PR posters, survey campaigns and training visuals for healthcare-service communication.",
-          "th": "ใช้จัดทำโปสเตอร์ประชาสัมพันธ์ แคมเปญแบบสอบถาม และสื่ออบรมสำหรับการสื่อสารงานบริการสุขภาพ"
+          "en": "Created customer survey campaigns, technical-service PR and employee-training visuals with clearer messages and faster production.",
+          "th": "จัดทำแคมเปญแบบสอบถามลูกค้า สื่อประชาสัมพันธ์บริการเทคนิค และสื่ออบรมพนักงานให้สื่อสารชัดเจนและผลิตได้รวดเร็วขึ้น"
         },
         "tools": [
           "Canva AI",
@@ -2382,18 +2488,64 @@ window.PORTFOLIO_DATA = {
       },
       {
         "title": {
-          "en": "AI-assisted service-scope communication",
-          "th": "ตัวอย่างการสื่อสารขอบเขตบริการด้วย AI"
+          "en": "AI QuickSuite local document workflow",
+          "th": "การใช้ AI QuickSuite กับงานเอกสารภายในเครื่อง"
         },
         "summary": {
-          "en": "Used to make service-scope materials more visual and easier for teams and customers to understand.",
-          "th": "ใช้ช่วยจัดทำสื่อขอบเขตบริการให้มองเห็นภาพ เข้าใจง่าย และนำไปใช้สื่อสารกับทีมและลูกค้าได้ดีขึ้น"
+          "en": "Explored local-file search, connected work tools, reusable skills, knowledge context and secure document workflows.",
+          "th": "ทดลองใช้การค้นหาไฟล์ภายในเครื่อง การเชื่อมต่อเครื่องมือทำงาน การสร้าง Skills บริบทความรู้ และ workflow เอกสารที่ควบคุมสิทธิ์ได้"
+        },
+        "tools": [
+          "Amazon QuickSuite"
+        ],
+        "image": "assets/ai-quick-suite.png"
+      },
+      {
+        "title": {
+          "en": "LINE OA and CES Hub access design",
+          "th": "การออกแบบการเข้าถึง CES Hub ผ่าน LINE OA"
+        },
+        "summary": {
+          "en": "Used AI to explore user journeys, content structure and a simpler mobile entry point for operational services.",
+          "th": "ใช้ AI ช่วยวิเคราะห์ user journey จัดโครงสร้างเนื้อหา และออกแบบจุดเข้าใช้งานผ่านมือถือสำหรับบริการด้านปฏิบัติการ"
+        },
+        "tools": [
+          "ChatGPT",
+          "Claude",
+          "Canva AI"
+        ],
+        "image": "assets/line.png"
+      },
+      {
+        "title": {
+          "en": "AI-assisted service-scope communication",
+          "th": "การสื่อสารขอบเขตบริการด้วย AI"
+        },
+        "summary": {
+          "en": "Turned complex service information into more visual and sales-ready communication materials.",
+          "th": "เปลี่ยนข้อมูลบริการที่ซับซ้อนให้เป็นสื่อที่เห็นภาพ เข้าใจง่าย และพร้อมใช้สนับสนุนการขายมากขึ้น"
         },
         "tools": [
           "Canva AI",
           "ChatGPT"
         ],
         "image": "assets/project-service-scope-brochure.jpg"
+      },
+      {
+        "title": {
+          "en": "NEBB readiness analysis and presentation",
+          "th": "การวิเคราะห์ความพร้อมและจัดทำสื่อ NEBB"
+        },
+        "summary": {
+          "en": "Used AI to structure document requirements, risks, timelines and decision points into a clear readiness narrative.",
+          "th": "ใช้ AI ช่วยจัดโครงสร้างข้อกำหนดเอกสาร ความเสี่ยง timeline และประเด็นตัดสินใจให้เป็นเรื่องราวความพร้อมที่เข้าใจง่าย"
+        },
+        "tools": [
+          "Claude",
+          "ChatGPT",
+          "Canva AI"
+        ],
+        "image": "assets/NEBB.png"
       }
     ]
   }

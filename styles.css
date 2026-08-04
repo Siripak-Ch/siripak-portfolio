@@ -556,3 +556,71 @@ h1 { margin-bottom: 4px; font-size: clamp(44px, 5vw, 64px); }
   .ai-showcase-card { grid-template-columns: 1fr; }
   .ai-showcase-visual { height: 160px; }
 }
+
+
+/* V2.5 — AI competency levels and expanded visual showcase */
+.ai-layout { grid-template-columns: 1fr; }
+.ai-tool-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.ai-tool-head { align-items: flex-start; justify-content: space-between; }
+.ai-tool-title { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; }
+.ai-competency {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 26px;
+  padding: 0 9px;
+  border: 1px solid #d8e6f6;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--navy-800);
+}
+.ai-competency strong { font-size: 9px; line-height: 1; }
+.ai-level-icon {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 13px;
+}
+.ai-level-icon span {
+  display: block;
+  width: 3px;
+  border-radius: 3px;
+  background: #d5e0ec;
+}
+.ai-level-icon span:nth-child(1) { height: 5px; }
+.ai-level-icon span:nth-child(2) { height: 9px; }
+.ai-level-icon span:nth-child(3) { height: 13px; }
+.ai-level-icon span.active { background: var(--blue-600); }
+.ai-showcase-heading { align-items: center; }
+.ai-showcase-heading > div:first-child { display: grid; gap: 2px; }
+.ai-showcase-heading h3 { margin: 0; }
+.ai-showcase-heading span { color: var(--ink-500); font-size: 11px; }
+.ai-showcase-track { grid-auto-columns: minmax(310px, 31%); }
+.ai-showcase-card {
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+.ai-showcase-visual { height: 178px; border-radius: 0; }
+.ai-showcase-copy { flex: 1; padding: 17px; }
+.ai-showcase-copy h4 { font-size: 15px; }
+.ai-showcase-copy p {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+.ai-showcase-copy .tag-row { margin-top: auto; }
+
+@media (max-width: 900px) {
+  .ai-tool-grid { grid-template-columns: 1fr; }
+  .ai-showcase-track { grid-auto-columns: minmax(300px, 48%); }
+}
+@media (max-width: 620px) {
+  .ai-showcase-track { grid-auto-columns: minmax(280px, 88%); }
+  .ai-showcase-card { min-height: 345px; }
+  .ai-showcase-visual { height: 165px; }
+}

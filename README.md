@@ -142,3 +142,12 @@ settings: {
 - Added AI tool usage cards and AI-supported work examples
 - Updated People Development and Service Development project covers
 - Kept Google Drive detail links hidden from the public portfolio
+
+## Update v2.5 AI competency and project covers
+
+- Expanded AI-supported output gallery to 9 visual examples.
+- Added competency-level indicators for all AI tools.
+- Added UTH Daily Medical Equipment Check Dashboard.
+- Updated People Development covers for New Staff Training, Staff Guideline, Leadership Journey and Competency Training.
+- Updated Service Development covers for Infusion Pump Rental, NEBB, LINE OA, Check Stock, Car Booking and Service CSI.
+- Public Google Drive links and Drive IDs remain hidden.

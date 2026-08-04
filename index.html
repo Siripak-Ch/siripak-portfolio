@@ -143,7 +143,7 @@
         </div>
 
         <div class="ai-layout">
-          <article class="minimal-panel reveal">
+          <article class="minimal-panel reveal ai-tools-panel">
             <div class="panel-heading">
               <h3 id="aiToolsHeading"></h3>
               <span id="aiToolsHint"></span>
@@ -151,12 +151,18 @@
             <div class="ai-tool-grid" id="aiToolsGrid"></div>
           </article>
 
-          <article class="minimal-panel reveal">
-            <div class="panel-heading">
-              <h3 id="aiShowcasesHeading"></h3>
-              <span id="aiShowcasesHint"></span>
+          <article class="minimal-panel reveal ai-showcases-panel">
+            <div class="panel-heading ai-showcase-heading">
+              <div>
+                <h3 id="aiShowcasesHeading"></h3>
+                <span id="aiShowcasesHint"></span>
+              </div>
+              <div class="slider-controls" data-slider-controls="aiShowcasesGrid">
+                <button type="button" data-direction="prev" aria-label="Previous AI examples">←</button>
+                <button type="button" data-direction="next" aria-label="Next AI examples">→</button>
+              </div>
             </div>
-            <div class="ai-showcase-grid" id="aiShowcasesGrid"></div>
+            <div class="horizontal-track ai-showcase-track" id="aiShowcasesGrid"></div>
           </article>
         </div>
       </div>
