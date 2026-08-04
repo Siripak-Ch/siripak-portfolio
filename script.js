@@ -48,7 +48,8 @@
       location: "Location",
       sortImpact: "Impact first",
       sortLatest: "Latest first",
-      sourceEvidence: "View project"
+      sourceEvidence: "View project",
+      aiLabel: "AI portfolio"
     },
     th: {
       portfolioLabel: "แฟ้มสะสมผลงานวิชาชีพ",
@@ -90,7 +91,8 @@
       location: "สถานที่",
       sortImpact: "เรียงตามผลกระทบ",
       sortLatest: "เรียงล่าสุดก่อน",
-      sourceEvidence: "ดูรายละเอียดผลงาน"
+      sourceEvidence: "ดูรายละเอียดผลงาน",
+      aiLabel: "AI Portfolio"
     }
   };
 
@@ -231,6 +233,44 @@
       </div>`).join("");
   }
 
+
+  function renderAIPortfolio() {
+    if (!data.aiPortfolio) return;
+    setText("#aiHeading", localized(data.aiPortfolio.heading));
+    setText("#aiSummary", localized(data.aiPortfolio.summary));
+    setText("#aiToolsHeading", localized(data.aiPortfolio.toolsHeading));
+    setText("#aiToolsHint", localized(data.aiPortfolio.toolsHint));
+    setText("#aiShowcasesHeading", localized(data.aiPortfolio.showcasesHeading));
+    setText("#aiShowcasesHint", localized(data.aiPortfolio.showcasesHint));
+
+    const toolsGrid = document.querySelector("#aiToolsGrid");
+    if (toolsGrid) {
+      toolsGrid.innerHTML = (data.aiPortfolio.tools || []).map((tool) => `
+        <article class="ai-tool-card">
+          <div class="ai-tool-head">
+            <h4>${escapeHTML(tool.name)}</h4>
+            <span class="ai-tool-badge">${escapeHTML(localized(tool.category))}</span>
+          </div>
+          <p>${escapeHTML(localized(tool.summary))}</p>
+        </article>`).join("");
+    }
+
+    const showcaseGrid = document.querySelector("#aiShowcasesGrid");
+    if (showcaseGrid) {
+      showcaseGrid.innerHTML = (data.aiPortfolio.showcases || []).map((item) => `
+        <article class="ai-showcase-card">
+          <div class="ai-showcase-visual">
+            <img class="js-image-fallback" src="${escapeHTML(item.image || 'assets/project-dashboard.jpg')}" alt="${escapeHTML(localized(item.title))}" loading="lazy">
+          </div>
+          <div class="ai-showcase-copy">
+            <h4>${escapeHTML(localized(item.title))}</h4>
+            <p>${escapeHTML(localized(item.summary))}</p>
+            <div class="tag-row">${(item.tools || []).map((tool) => `<span class="tag">${escapeHTML(tool)}</span>`).join("")}</div>
+          </div>
+        </article>`).join("");
+    }
+  }
+
   function renderExperience() {
     document.querySelector("#experienceList").innerHTML = sortByOrder(data.experience).map((item) => `
       <article class="experience-card reveal">
@@ -360,6 +400,7 @@
     renderAbout();
     renderExperience();
     renderKnowledge();
+    renderAIPortfolio();
     renderProjects();
     renderCredentials();
     renderContact();

@@ -135,3 +135,10 @@ settings: {
   showSourceDetails: false
 }
 ```
+
+
+## Update v2.4 AI Portfolio
+- Added bilingual AI Portfolio section
+- Added AI tool usage cards and AI-supported work examples
+- Updated People Development and Service Development project covers
+- Kept Google Drive detail links hidden from the public portfolio
