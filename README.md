@@ -160,3 +160,8 @@ settings: {
 - Added visual cards to External Activities.
 - Added official public-event links for Medtec Southeast Asia 2026 and Cosmoprof CBE ASEAN 2026.
 - Kept Google Drive links hidden from the public website.
+
+## Mobile UX/UI release
+- V2.7 mobile responsive fix: the hero is single-column on phones/small tablets, preventing the profile image and text from overlapping.
+- Preserves the existing desktop design, portfolio content, language switch, project cards, résumé and external links.
+- No content/data removal was made in this release.
