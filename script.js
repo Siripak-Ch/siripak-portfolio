@@ -320,7 +320,7 @@
 
   function projectCard(project, index) {
     return `
-      <article class="project-card ${project.featured ? "featured" : ""}" data-project-id="${escapeHTML(project.id || "")}" tabindex="0" role="button" aria-label="${escapeHTML(localized(project.title))}">
+      <article class="project-card ${project.featured ? "featured" : ""}">
         <div class="project-visual">
           <img class="js-image-fallback" src="${escapeHTML(project.image || "assets/project-dashboard.jpg")}" alt="${escapeHTML(localized(project.imageAlt) || localized(project.title))}" loading="lazy">
           <div class="project-visual-overlay">
@@ -337,51 +337,6 @@
           ${sourceLink(project.source)}
         </div>
       </article>`;
-  }
-
-
-  function findProject(projectId) {
-    for (const group of (data.projectGroups || [])) {
-      const project = (group.projects || []).find((item) => String(item.id) === String(projectId));
-      if (project) return { project, group };
-    }
-    return null;
-  }
-
-  function openProjectModal(projectId) {
-    const found = findProject(projectId);
-    const modal = document.querySelector("#projectModal");
-    if (!found || !modal) return;
-    const { project, group } = found;
-    const title = localized(project.title);
-    document.querySelector("#projectModalKicker").textContent =
-      `${localized(group.title)}${project.date ? ` · ${project.date}` : ""}`;
-    document.querySelector("#projectModalTitle").textContent = title;
-    document.querySelector("#projectModalResult").textContent =
-      `${UI[language].result}: ${localized(project.result)}`;
-    document.querySelector("#projectModalSummary").textContent = localized(project.summary);
-    document.querySelector("#projectModalTags").innerHTML =
-      (project.tags || []).map((tag) => `<span class="tag">${escapeHTML(localized(tag))}</span>`).join("");
-
-    const link = document.querySelector("#projectModalLink");
-    const publicUrl = project.source?.url &&
-      !(data.settings.hideGoogleDriveLinks !== false && isGoogleDriveSource(project.source))
-      ? project.source.url : "";
-    link.hidden = !publicUrl;
-    if (publicUrl) link.href = publicUrl;
-
-    modal.classList.add("open");
-    modal.setAttribute("aria-hidden", "false");
-    document.body.classList.add("modal-open");
-    document.querySelector(".project-modal-close")?.focus();
-  }
-
-  function closeProjectModal() {
-    const modal = document.querySelector("#projectModal");
-    if (!modal) return;
-    modal.classList.remove("open");
-    modal.setAttribute("aria-hidden", "true");
-    document.body.classList.remove("modal-open");
   }
 
   function renderProjects() {
@@ -510,32 +465,9 @@
       });
     }, { rootMargin: "-35% 0px -55%", threshold: 0 });
     sections.forEach((section) => navObserver.observe(section));
-
-    const mobileLinks = [...document.querySelectorAll(".mobile-dock a[href^='#']")];
-    const mobileObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        mobileLinks.forEach((link) =>
-          link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`)
-        );
-      });
-    }, { rootMargin: "-45% 0px -45%", threshold: 0 });
-    sections.forEach((section) => mobileObserver.observe(section));
   }
 
   document.addEventListener("click", (event) => {
-    const closeTarget = event.target.closest("[data-modal-close]");
-    if (closeTarget) {
-      closeProjectModal();
-      return;
-    }
-
-    const projectCard = event.target.closest(".project-card[data-project-id]");
-    if (projectCard && !event.target.closest("a, button")) {
-      openProjectModal(projectCard.dataset.projectId);
-      return;
-    }
-
     const sortButton = event.target.closest("button[data-project-sort]");
     if (!sortButton) return;
     projectSortModes[sortButton.dataset.groupId] = sortButton.dataset.projectSort;
@@ -569,25 +501,8 @@
     if (event.key === "Escape") {
       nav.classList.remove("open");
       navToggle.setAttribute("aria-expanded", "false");
-      closeProjectModal();
-    }
-    const card = event.target.closest?.(".project-card[data-project-id]");
-    if (card && (event.key === "Enter" || event.key === " ")) {
-      event.preventDefault();
-      openProjectModal(card.dataset.projectId);
     }
   });
-
-  const scrollProgress = document.querySelector("#scrollProgress");
-  const updateScrollProgress = () => {
-    if (!scrollProgress) return;
-    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
-    scrollProgress.style.width = `${Math.min(100, Math.max(0, progress))}%`;
-  };
-  window.addEventListener("scroll", updateScrollProgress, { passive: true });
-  window.addEventListener("resize", updateScrollProgress);
-  updateScrollProgress();
 
   document.querySelector("#year").textContent = new Date().getFullYear();
   renderAll();
